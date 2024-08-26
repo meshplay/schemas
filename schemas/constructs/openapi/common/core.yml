@@ -266,7 +266,7 @@ components:
       x-oapi-codegen-extra-tags:
         db: meshplay_instance_id
         json: meshplay_instance_id
-      x-go-name: MesheryInstanceID
+      x-go-name: MeshplayInstanceID
       x-go-type-skip-optional-pointer: true
       
     kubernetes_server_uuid: 

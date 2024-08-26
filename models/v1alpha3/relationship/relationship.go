@@ -111,7 +111,7 @@ const (
 )
 
 type Relationship_Metadata struct {
-	// Description Characterization of the meaning of the relationship and its relevance to both Meshery and entities under management.
+	// Description Characterization of the meaning of the relationship and its relevance to both Meshplay and entities under management.
 	Description *string                               `json:"description" yaml:"description"`
 	Styles      *RelationshipDefinitionMetadataStyles `json:"styles" yaml:"styles"`
 }
@@ -130,7 +130,7 @@ type MatchSelector struct {
 }
 
 type SelectorItem struct {
-	// Id A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+	// Id A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
 	Id    *uuid.UUID    `json:"id" yaml:"id"`
 	Kind  *string       `json:"kind" yaml:"kind"`
 	Match MatchSelector `json:"match,omitempty" yaml:"match,omitempty"`
@@ -166,7 +166,7 @@ const (
 	Ignored RelationshipDefinitionStatus = "ignored"
 )
 
-// RelationshipDefinition Relationships define the nature of interaction between interconnected components in Meshery. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.
+// RelationshipDefinition Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.
 type RelationshipDefinition struct {
 	// Id Uniquely identifies the entity
 	Id uuid.UUID `json:"id" yaml:"id"`

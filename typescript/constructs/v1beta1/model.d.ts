@@ -6,9 +6,9 @@
  */
 
 /**
- * Meshery Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
+ * Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
  */
-export interface HttpsSchemasMesheryIoModelJson {
+export interface HttpsSchemasMeshplayIoModelJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -37,17 +37,17 @@ export interface HttpsSchemasMesheryIoModelJson {
    * Status of model, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
    * - maintenance: model is unavailable for a period of time.
-   * - enabled: model is available for use for all users of this Meshery Server.
-   * - ignored: model is unavailable for use for all users of this Meshery Server.
+   * - enabled: model is available for use for all users of this Meshplay Server.
+   * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMesheryIoComponentJson;
+  registrant: HttpsSchemasMeshplayIoComponentJson;
   /**
    * Category of the model.
    */
   category: {
     /**
-     * A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+     * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
      */
     id?: string;
     name?: string;
@@ -67,7 +67,7 @@ export interface HttpsSchemasMesheryIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMesheryIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -106,9 +106,9 @@ export interface HttpsSchemasMesheryIoModelJson {
   };
 }
 /**
- * Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
  */
-export interface HttpsSchemasMesheryIoComponentJson {
+export interface HttpsSchemasMeshplayIoComponentJson {
   /**
    * ID
    */
@@ -149,7 +149,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
     | "deleted"
     | "not found";
   /**
-   * A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+   * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
   user_id?: string;
   created_at?: string;
@@ -157,9 +157,9 @@ export interface HttpsSchemasMesheryIoComponentJson {
   deleted_at?: string;
 }
 /**
- * Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+ * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMesheryIoCapabilityJson {
+export interface HttpsSchemasMeshplayIoCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */

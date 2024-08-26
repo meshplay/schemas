@@ -1,17 +1,17 @@
 openapi: 3.0.0
 info:
-  title: Meshery Cloud
+  title: Meshplay Cloud
   description: Documentation for meshplay Cloud REST APIs
   contact:
     email: support@layer5.io
   version: v0.6.394
 servers:
   - url: https://meshplay.layer5.io
-    description: Meshery Cloud production server URL
+    description: Meshplay Cloud production server URL
   - url: https://staging-meshplay.layer5.io
-    description: Meshery Cloud staging server URL
+    description: Meshplay Cloud staging server URL
   - url: http://localhost:9876
-    description: Meshery Cloud development server URL (controlled via PORT environment variable)
+    description: Meshplay Cloud development server URL (controlled via PORT environment variable)
 tags:
   - name: events
     description: APIs for events
@@ -44,8 +44,8 @@ components:
 
         system_id:
           description: |
-            The system from which the request is sourced. In the case of Meshery Server, 
-            the ID is meshplay_instance_id of Meshery Server (which can be found in the metadata of`Connections` table).
+            The system from which the request is sourced. In the case of Meshplay Server, 
+            the ID is meshplay_instance_id of Meshplay Server (which can be found in the metadata of`Connections` table).
           $ref: "./common/core.yml#/components/schemas/system_id"
 
         operation_id:
@@ -91,7 +91,7 @@ components:
           description: |
             A summary/receipt of event that occured.
           type: string
-          example: “Prometheus” pattern deployed in K8s ctx “Meshery Cloud”.
+          example: “Prometheus” pattern deployed in K8s ctx “Meshplay Cloud”.
           x-oapi-codegen-extra-tags:
             db: description
 

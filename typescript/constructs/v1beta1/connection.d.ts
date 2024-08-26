@@ -6,9 +6,9 @@
  */
 
 /**
- * Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
  */
-export interface HttpsSchemasMesheryIoComponentJson {
+export interface HttpsSchemasMeshplayIoComponentJson {
   /**
    * ID
    */
@@ -49,7 +49,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
     | "deleted"
     | "not found";
   /**
-   * A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+   * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
   user_id?: string;
   created_at?: string;

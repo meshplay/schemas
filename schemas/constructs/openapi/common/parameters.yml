@@ -54,7 +54,7 @@ components:
     serverId:
       name: meshplayServerID
       in: path
-      description: Meshery server ID
+      description: Meshplay server ID
       schema:
         $ref: ./core.yml#/components/schemas/id
       required: true
@@ -62,7 +62,7 @@ components:
     instanceId:
       name: meshplayInstanceID
       in: path
-      description: Meshery instance ID
+      description: Meshplay instance ID
       schema:
         $ref: ./core.yml#/components/schemas/id
       required: true
@@ -70,7 +70,7 @@ components:
     contextId:
       name: contextID
       in: path
-      description: Meshery context ID
+      description: Meshplay context ID
       schema:
         $ref: ./core.yml#/components/schemas/id
       required: true
@@ -194,7 +194,7 @@ components:
     connectionKind:
       name: connectionKind
       in: path
-      description: 'Connection kind (eg: Meshery)'
+      description: 'Connection kind (eg: Meshplay)'
       required: true
       schema:
         type: string
@@ -202,7 +202,7 @@ components:
     connectionId:
       name: connectionId
       in: path
-      description: Meshery Server Connection ID
+      description: Meshplay Server Connection ID
       schema:
         $ref: ./core.yml#/components/schemas/id
 

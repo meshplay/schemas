@@ -33,8 +33,8 @@ type InstanceId = Id
 // IsOAuth defines model for isOAuth.
 type IsOAuth = string
 
-// MesheryVersion defines model for meshplayVersion.
-type MesheryVersion = string
+// MeshplayVersion defines model for meshplayVersion.
+type MeshplayVersion = string
 
 // Name defines model for name.
 type Name = string

@@ -185,7 +185,7 @@ export type ComponentStyles = Styles & {
 /**
  * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components
  */
-export interface HttpsSchemasMesheryIoComponentJson {
+export interface HttpsSchemasMeshplayIoComponentJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -210,18 +210,18 @@ export interface HttpsSchemasMesheryIoComponentJson {
    * Format specifies the format used in the `component.schema` field. JSON is the default.
    */
   format?: "JSON" | "CUE";
-  model: HttpsSchemasMesheryIoModelJson;
+  model: HttpsSchemasMeshplayIoModelJson;
   styles?: ComponentStyles;
   /**
-   * Meshery manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+   * Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
    */
-  capabilities?: HttpsSchemasMesheryIoCapabilityJson[];
+  capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
   /**
    * Status of component, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
    * - maintenance: model is unavailable for a period of time.
-   * - enabled: model is available for use for all users of this Meshery Server.
-   * - ignored: model is unavailable for use for all users of this Meshery Server.
+   * - enabled: model is available for use for all users of this Meshplay Server.
+   * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
   /**
@@ -237,7 +237,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
      */
     isAnnotation?: boolean;
     /**
-     * 'published' controls whether the component should be registered in Meshery Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
+     * 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
      */
     published?: boolean;
     [k: string]: unknown;
@@ -270,7 +270,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
 /**
  * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models
  */
-export interface HttpsSchemasMesheryIoModelJson {
+export interface HttpsSchemasMeshplayIoModelJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -299,17 +299,17 @@ export interface HttpsSchemasMesheryIoModelJson {
    * Status of model, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
    * - maintenance: model is unavailable for a period of time.
-   * - enabled: model is available for use for all users of this Meshery Server.
-   * - ignored: model is unavailable for use for all users of this Meshery Server.
+   * - enabled: model is available for use for all users of this Meshplay Server.
+   * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMesheryIoComponentJson1;
+  registrant: HttpsSchemasMeshplayIoComponentJson1;
   /**
    * Category of the model.
    */
   category: {
     /**
-     * A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+     * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
      */
     id?: string;
     name?: string;
@@ -329,7 +329,7 @@ export interface HttpsSchemasMesheryIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMesheryIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -368,9 +368,9 @@ export interface HttpsSchemasMesheryIoModelJson {
   };
 }
 /**
- * Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
  */
-export interface HttpsSchemasMesheryIoComponentJson1 {
+export interface HttpsSchemasMeshplayIoComponentJson1 {
   /**
    * ID
    */
@@ -411,7 +411,7 @@ export interface HttpsSchemasMesheryIoComponentJson1 {
     | "deleted"
     | "not found";
   /**
-   * A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+   * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
   user_id?: string;
   created_at?: string;
@@ -419,9 +419,9 @@ export interface HttpsSchemasMesheryIoComponentJson1 {
   deleted_at?: string;
 }
 /**
- * Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+ * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMesheryIoCapabilityJson {
+export interface HttpsSchemasMeshplayIoCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */

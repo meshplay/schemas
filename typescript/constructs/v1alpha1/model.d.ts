@@ -6,9 +6,9 @@
  */
 
 /**
- * Meshery Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
+ * Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
  */
-export interface HttpsSchemasMesheryIoModelJson {
+export interface HttpsSchemasMeshplayIoModelJson {
   /**
    * The name for the model.
    */

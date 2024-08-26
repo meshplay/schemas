@@ -65,8 +65,8 @@ type KubernetesServerID = uuid.UUID
 // MapObject defines model for map_object.
 type MapObject map[string]string
 
-// MesheryInstanceID defines model for meshplay_instance_uuid.
-type MesheryInstanceID = uuid.UUID
+// MeshplayInstanceID defines model for meshplay_instance_uuid.
+type MeshplayInstanceID = uuid.UUID
 
 // NullTime SQL null Timestamp to handle null values of time.
 type NullTime = sql.NullTime

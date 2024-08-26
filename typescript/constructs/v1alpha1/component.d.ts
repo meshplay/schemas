@@ -26,7 +26,7 @@ export interface ComponentDefinitionsJson {
      */
     description?: string;
     /**
-     * Meshery manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions made define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+     * Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions made define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
      */
     capabilities?: {
       [k: string]: unknown;
@@ -41,7 +41,7 @@ export interface ComponentDefinitionsJson {
     version: string;
     [k: string]: unknown;
   };
-  model: HttpsSchemasMesheryIoModelJson;
+  model: HttpsSchemasMeshplayIoModelJson;
   /**
    * Display name of the component.
    */
@@ -58,7 +58,7 @@ export interface ComponentDefinitionsJson {
 /**
  * Model of the component. Learn more at https://docs.meshplay.io/concepts/models
  */
-export interface HttpsSchemasMesheryIoModelJson {
+export interface HttpsSchemasMeshplayIoModelJson {
   /**
    * The name for the model.
    */

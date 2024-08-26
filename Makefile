@@ -1,4 +1,4 @@
-# Copyright Meshery Authors
+# Copyright Meshplay Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ site:
 	bundle install; $(jekyll) serve --drafts --incremental --livereload 
 
 
-## Lint check Meshery Server.
+## Lint check Meshplay Server.
 golangci: error dep-check
 	golangci-lint run
 

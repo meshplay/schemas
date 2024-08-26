@@ -31,5 +31,5 @@ jobs:
             commit_user_email: ci@layer5.io
             commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
             commit_options: '--signoff'
-            commit_message: '[Docs] Release Notes for Meshery ${{ steps.release_drafter.outputs.tag_name }}'
+            commit_message: '[Docs] Release Notes for Meshplay ${{ steps.release_drafter.outputs.tag_name }}'
             branch: master

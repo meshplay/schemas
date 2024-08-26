@@ -19,7 +19,7 @@ services:
             metadata: null
             name: Orchestration & Management
           components: []
-          displayName: Meshery Core
+          displayName: Meshplay Core
           hostID: 00000000-0000-0000-0000-000000000000
           id: 5400b823-94ee-543c-8877-4ca3e299fcc4
           metadata:

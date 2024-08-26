@@ -8,6 +8,6 @@
 /**
  * Reusable relationships selectors schema elements
  */
-export interface HttpsSchemasMesheryIoSelectorsJson {
+export interface HttpsSchemasMeshplayIoSelectorsJson {
   [k: string]: unknown;
 }

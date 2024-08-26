@@ -10,28 +10,28 @@ import (
 	"github.com/meshplay/schemas/models/v1alpha3/relationship"
 )
 
-// Defines values for MesheryPatternCatalogDataClass.
+// Defines values for MeshplayPatternCatalogDataClass.
 const (
-	Community MesheryPatternCatalogDataClass = "community"
-	Official  MesheryPatternCatalogDataClass = "official"
-	Verified  MesheryPatternCatalogDataClass = "verified"
+	Community MeshplayPatternCatalogDataClass = "community"
+	Official  MeshplayPatternCatalogDataClass = "official"
+	Verified  MeshplayPatternCatalogDataClass = "verified"
 )
 
-// Defines values for MesheryPatternCatalogDataCompatibility.
+// Defines values for MeshplayPatternCatalogDataCompatibility.
 const (
-	Kubernetes MesheryPatternCatalogDataCompatibility = "kubernetes"
+	Kubernetes MeshplayPatternCatalogDataCompatibility = "kubernetes"
 )
 
-// Defines values for MesheryPatternCatalogDataType.
+// Defines values for MeshplayPatternCatalogDataType.
 const (
-	Deployment        MesheryPatternCatalogDataType = "Deployment"
-	Observability     MesheryPatternCatalogDataType = "Observability"
-	Resiliency        MesheryPatternCatalogDataType = "Resiliency"
-	Scaling           MesheryPatternCatalogDataType = "Scaling"
-	Security          MesheryPatternCatalogDataType = "Security"
-	TrafficManagement MesheryPatternCatalogDataType = "Traffic-management"
-	Troubleshooting   MesheryPatternCatalogDataType = "Troubleshooting"
-	Workloads         MesheryPatternCatalogDataType = "Workloads"
+	Deployment        MeshplayPatternCatalogDataType = "Deployment"
+	Observability     MeshplayPatternCatalogDataType = "Observability"
+	Resiliency        MeshplayPatternCatalogDataType = "Resiliency"
+	Scaling           MeshplayPatternCatalogDataType = "Scaling"
+	Security          MeshplayPatternCatalogDataType = "Security"
+	TrafficManagement MeshplayPatternCatalogDataType = "Traffic-management"
+	Troubleshooting   MeshplayPatternCatalogDataType = "Troubleshooting"
+	Workloads         MeshplayPatternCatalogDataType = "Workloads"
 )
 
 // DeletePatternModel defines model for deletePatternModel.
@@ -65,8 +65,8 @@ type PatternFile struct {
 	Version string `json:"version" yaml:"version"`
 }
 
-// MesheryPattern defines model for meshplayPattern.
-type MesheryPattern struct {
+// MeshplayPattern defines model for meshplayPattern.
+type MeshplayPattern struct {
 	CatalogData *v1alpha2.CatalogData `json:"catalog_data,omitempty" yaml:"catalog_data"`
 	CreatedAt externalRef1.Time      `json:"created_at,omitempty"`
 	UserID    externalRef1.Id        `db:"user_id" json:"user_id"`
@@ -80,26 +80,26 @@ type MesheryPattern struct {
 	Visibility  externalRef1.Text `json:"visibility,omitempty"`
 }
 
-// MesheryPatternCatalogDataClass Published content is classifed by its support level. Content classes help you understand the origin and expected support level for each piece of content. It is important to note that the level of support may vary within each class, and you should exercise discretion when using community-contributed content. Content produced and fully supported by Meshery maintainers. This represents the highest level of support and is considered the most reliable. Content produced by partners and verified by Meshery maintainers. While not directly maintained by Meshery, it has undergone a verification process to ensure quality and compatibility. Content produced and supported by the respective project or organization responsible for the specific technology. This class offers a level of support from the project maintainers themselves. Content produced and shared by Meshery users. This includes a wide range of content, such as performance profiles, test results, filters, patterns, and applications. Community content may have varying levels of support and reliability.
-type MesheryPatternCatalogDataClass string
+// MeshplayPatternCatalogDataClass Published content is classifed by its support level. Content classes help you understand the origin and expected support level for each piece of content. It is important to note that the level of support may vary within each class, and you should exercise discretion when using community-contributed content. Content produced and fully supported by Meshplay maintainers. This represents the highest level of support and is considered the most reliable. Content produced by partners and verified by Meshplay maintainers. While not directly maintained by Meshplay, it has undergone a verification process to ensure quality and compatibility. Content produced and supported by the respective project or organization responsible for the specific technology. This class offers a level of support from the project maintainers themselves. Content produced and shared by Meshplay users. This includes a wide range of content, such as performance profiles, test results, filters, patterns, and applications. Community content may have varying levels of support and reliability.
+type MeshplayPatternCatalogDataClass string
 
-// MesheryPatternCatalogDataCompatibility defines model for MesheryPattern.CatalogData.Compatibility.
-type MesheryPatternCatalogDataCompatibility string
+// MeshplayPatternCatalogDataCompatibility defines model for MeshplayPattern.CatalogData.Compatibility.
+type MeshplayPatternCatalogDataCompatibility string
 
-// MesheryPatternCatalogDataType Categorization of the type of design or operational flow depicted in this design.
-type MesheryPatternCatalogDataType string
+// MeshplayPatternCatalogDataType Categorization of the type of design or operational flow depicted in this design.
+type MeshplayPatternCatalogDataType string
 
-// MesheryPatternPage defines model for meshplayPatternPage.
-type MesheryPatternPage struct {
+// MeshplayPatternPage defines model for meshplayPatternPage.
+type MeshplayPatternPage struct {
 	Page       int               `json:"page,omitempty"`
 	PageSize   int               `json:"page_size,omitempty"`
-	Patterns   *[]MesheryPattern `json:"patterns,omitempty"`
+	Patterns   *[]MeshplayPattern `json:"patterns,omitempty"`
 	ResultType string            `json:"resultType,omitempty"`
 	TotalCount int               `json:"total_count,omitempty"`
 }
 
-// MesheryPatternResource defines model for meshplayPatternResource.
-type MesheryPatternResource struct {
+// MeshplayPatternResource defines model for meshplayPatternResource.
+type MeshplayPatternResource struct {
 	CreatedAt externalRef1.Time `json:"created_at,omitempty"`
 	Deleted   *bool             `json:"deleted,omitempty"`
 	ID        externalRef1.Id   `db:"id" json:"id"`
@@ -111,11 +111,11 @@ type MesheryPatternResource struct {
 	UserID    externalRef1.Id   `db:"user_id" json:"user_id"`
 }
 
-// MesheryPatternResourcePage defines model for meshplayPatternResourcePage.
-type MesheryPatternResourcePage struct {
+// MeshplayPatternResourcePage defines model for meshplayPatternResourcePage.
+type MeshplayPatternResourcePage struct {
 	Page       int                       `json:"page,omitempty"`
 	PageSize   int                       `json:"page_size,omitempty"`
-	Resources  *[]MesheryPatternResource `json:"resources,omitempty"`
+	Resources  *[]MeshplayPatternResource `json:"resources,omitempty"`
 	ResultType string                    `json:"resultType,omitempty"`
 	TotalCount int                       `json:"total_count,omitempty"`
 }
@@ -128,15 +128,15 @@ type DesignShare struct {
 	Share       bool                `json:"share"`
 }
 
-// MesheryPatternDeleteRequestBody defines model for meshplayPatternDeleteRequestBody.
-type MesheryPatternDeleteRequestBody struct {
+// MeshplayPatternDeleteRequestBody defines model for meshplayPatternDeleteRequestBody.
+type MeshplayPatternDeleteRequestBody struct {
 	Patterns *[]DeletePatternModel `json:"patterns,omitempty"`
 }
 
-// MesheryPatternRequestBody defines model for meshplayPatternRequestBody.
-type MesheryPatternRequestBody struct {
+// MeshplayPatternRequestBody defines model for meshplayPatternRequestBody.
+type MeshplayPatternRequestBody struct {
 	Path        externalRef1.Text     `json:"path,omitempty"`
-	PatternData *MesheryPattern       `json:"pattern_data,omitempty"`
+	PatternData *MeshplayPattern       `json:"pattern_data,omitempty"`
 	Save        *bool                 `json:"save,omitempty"`
 	Url         externalRef1.Endpoint `json:"url,omitempty"`
 }

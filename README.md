@@ -3,7 +3,7 @@
  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-light-text-side.svg">
  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg">
 <img src="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg"
-alt="Meshery Logo" width="70%" /></picture></a><br /><br /></p>
+alt="Meshplay Logo" width="70%" /></picture></a><br /><br /></p>
 <p align="center">
 <a href="https://hub.docker.com/r/layer5/meshplay" alt="Docker pulls">
   <img src="https://img.shields.io/docker/pulls/layer5/meshplay.svg" /></a>
@@ -11,7 +11,7 @@ alt="Meshery Logo" width="70%" /></picture></a><br /><br /></p>
   <img src="https://img.shields.io/github/issues/layer5io/meshplay/help%20wanted.svg?color=informational" /></a>
 <a href="https://github.com/meshplay/meshplay/blob/master/LICENSE" alt="LICENSE">
   <img src="https://img.shields.io/github/license/meshplay/meshplay?color=brightgreen" /></a>
-<a href="https://artifacthub.io/packages/helm/meshplay/meshplay" alt="Artifact Hub Meshery">
+<a href="https://artifacthub.io/packages/helm/meshplay/meshplay" alt="Artifact Hub Meshplay">
   <img src="https://img.shields.io/endpoint?color=brightgreen&label=Helm%20Chart&style=plastic&url=https%3A%2F%2Fartifacthub.io%2Fbadge%2Frepository%2Fartifact-hub" /></a>  
 <a href="https://goreportcard.com/report/github.com/meshplay/meshplay" alt="Go Report Card">
   <img src="https://goreportcard.com/badge/github.com/meshplay/meshplay" /></a>
@@ -24,19 +24,19 @@ alt="Meshery Logo" width="70%" /></picture></a><br /><br /></p>
 <a href="https://slack.meshplay.io" alt="Join Slack">
   <img src="https://img.shields.io/badge/Slack-@layer5.svg?logo=slack" /></a>
 <a href="https://twitter.com/intent/follow?screen_name=meshplayio" alt="Twitter Follow">
-  <img src="https://img.shields.io/twitter/follow/meshplayio.svg?label=Follow+Meshery&style=social" /></a>
-<a href="https://github.com/meshplay/meshplay/releases" alt="Meshery Downloads">
+  <img src="https://img.shields.io/twitter/follow/meshplayio.svg?label=Follow+Meshplay&style=social" /></a>
+<a href="https://github.com/meshplay/meshplay/releases" alt="Meshplay Downloads">
   <img src="https://img.shields.io/github/downloads/meshplay/meshplay/total" /></a>  
 <!-- <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fmeshplay%2Fmeshplay?ref=badge_shield" alt="License Scan Report">
   <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmeshplay%2Fmeshplay.svg?type=shield"/></a>  
   -->
 </p>
 
-<h5><p align="center"><i>If you’re using Meshery or if you like the project, please <a href="https://github.com/meshplay/meshplay/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
+<h5><p align="center"><i>If you’re using Meshplay or if you like the project, please <a href="https://github.com/meshplay/meshplay/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
 
-# Meshery Schemas
+# Meshplay Schemas
 
-Meshery follows schema-driven development. As a project, Meshery has different types of schemas. Some schemas are external facing, and some internal to Meshery itself. This repository serves as a central location for storing schemas from which all Meshery components can take reference.
+Meshplay follows schema-driven development. As a project, Meshplay has different types of schemas. Some schemas are external facing, and some internal to Meshplay itself. This repository serves as a central location for storing schemas from which all Meshplay components can take reference.
 
 
 <!-- The schema.go emabeds the openapi schema which gets packaged & released  used for purpose like validation
@@ -51,7 +51,7 @@ We can refer the unresolved schemas, but
  -->
 ### External
 
-Meshery schemas file structure is defined based on definitions and schemas, checkout [docs.meshplay.io](https://docs.meshplay.io/concepts/logical) to learn more about definitions and schemas.
+Meshplay schemas file structure is defined based on definitions and schemas, checkout [docs.meshplay.io](https://docs.meshplay.io/concepts/logical) to learn more about definitions and schemas.
 
 Definitions
 - model
@@ -79,7 +79,7 @@ Adapters
  
 <p style="clear:both;">&nbsp;</p>
 
-## Join the Meshery community!
+## Join the Meshplay community!
 
 <a name="contributing"></a><a name="community"></a>
 Our projects are community-built and welcome collaboration. 👍 Be sure to see the <a href="https://layer5.io/community/newcomers">Contributor Journey Map</a> and <a href="https://layer5.io/community/handbook">Community Handbook</a> for a tour of resources available to you and the <a href="https://layer5.io/community/handbook/repository-overview">Repository Overview</a> for a cursory description of repository by technology and programming language. Jump into community <a href="https://slack.meshplay.io">Slack</a> or <a href="http://discuss.meshplay.io">discussion forum</a> to participate.

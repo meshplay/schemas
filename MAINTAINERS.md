@@ -7,4 +7,4 @@
 | Yash Sharma         | yashsharma1911         | Layer5      |
 | Aabid Sofi          | aasofi19               | Layer5      |
 
-For other Meshery Maintainers, refer to  [MAINTAINERS.md in meshplay/meshplay](https://github.com/meshplay/meshplay/blob/master/MAINTAINERS.md).
+For other Meshplay Maintainers, refer to  [MAINTAINERS.md in meshplay/meshplay](https://github.com/meshplay/meshplay/blob/master/MAINTAINERS.md).

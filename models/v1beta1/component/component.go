@@ -308,7 +308,7 @@ type Component struct {
 
 // ComponentDefinition Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components
 type ComponentDefinition struct {
-	// Capabilities Meshery manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+	// Capabilities Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
 	Capabilities *[]capability.Capability `json:"capabilities,omitempty" yaml:"capabilities" gorm:"type:bytes;serializer:json"`
 
 	// Component Component and it's properties.
@@ -343,8 +343,8 @@ type ComponentDefinition struct {
 	// Status Status of component, including:
 	// - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
 	// - maintenance: model is unavailable for a period of time.
-	// - enabled: model is available for use for all users of this Meshery Server.
-	// - ignored: model is unavailable for use for all users of this Meshery Server.
+	// - enabled: model is available for use for all users of this Meshplay Server.
+	// - ignored: model is unavailable for use for all users of this Meshplay Server.
 	Status *ComponentDefinitionStatus `json:"status" yaml:"status"`
 
 	// Styles Visualization styles for a component
@@ -374,7 +374,7 @@ type ComponentDefinition_Metadata struct {
 	// IsNamespaced Identifies whether the component is scoped to namespace or clsuter wide.
 	IsNamespaced bool `json:"isNamespaced" yaml:"isNamespaced"`
 
-	// Published 'published' controls whether the component should be registered in Meshery Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
+	// Published 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
 	Published            bool                   `json:"published" yaml:"published"`
 	AdditionalProperties map[string]interface{} `json:"-"`
 }
@@ -388,8 +388,8 @@ type ComponentDefinitionModelMetadataCapabilitiesStatus string
 // ComponentDefinitionStatus Status of component, including:
 // - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
 // - maintenance: model is unavailable for a period of time.
-// - enabled: model is available for use for all users of this Meshery Server.
-// - ignored: model is unavailable for use for all users of this Meshery Server.
+// - enabled: model is available for use for all users of this Meshplay Server.
+// - ignored: model is unavailable for use for all users of this Meshplay Server.
 type ComponentDefinitionStatus string
 
 // ComponentDefinitionStylesBorderStyle The style of the node’s border

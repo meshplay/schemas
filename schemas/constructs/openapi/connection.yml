@@ -1,17 +1,17 @@
 openapi: 3.0.0
 info:
-  title: Meshery Cloud
+  title: Meshplay Cloud
   description: Documentation for meshplay Cloud REST APIs
   contact:
     email: support@layer5.io
   version: v0.6.394
 servers:
   - url: https://meshplay.layer5.io
-    description: Meshery Cloud production server URL
+    description: Meshplay Cloud production server URL
   - url: https://staging-meshplay.layer5.io
-    description: Meshery Cloud staging server URL
+    description: Meshplay Cloud staging server URL
   - url: http://localhost:9876
-    description: Meshery Cloud development server URL (controlled via PORT environment variable)
+    description: Meshplay Cloud development server URL (controlled via PORT environment variable)
 security:
   - jwt: []
 tags:
@@ -145,7 +145,7 @@ components:
     connectionKind:
       name: connectionKind
       in: path
-      description: "Connection kind (eg: Meshery)"
+      description: "Connection kind (eg: Meshplay)"
       required: true
       schema:
         $ref: ./common/core.yml#/components/schemas/text
@@ -159,7 +159,7 @@ components:
     serverId:
       name: meshplayServerID
       in: path
-      description: Meshery server ID
+      description: Meshplay server ID
       schema:
         $ref: ./common/core.yml#/components/schemas/id
       required: true
@@ -171,7 +171,7 @@ paths:
         - integrations
       operationId: RegisterConnection
       summary: Register Connection
-      description: Register with Meshery Cloud
+      description: Register with Meshplay Cloud
       requestBody:
         $ref: "#/components/requestBodies/connectionPayload"
       responses:
@@ -322,9 +322,9 @@ paths:
     delete:
       tags:
         - integrations
-      operationId: DeleteMesheryConnection
-      summary: Delete Meshery connection
-      description: Deletes a given meshplay connection. This is generally used for deleting connections from Meshery Server UI where UI is not aware of connection IDs.
+      operationId: DeleteMeshplayConnection
+      summary: Delete Meshplay connection
+      description: Deletes a given meshplay connection. This is generally used for deleting connections from Meshplay Server UI where UI is not aware of connection IDs.
       parameters:
         - $ref: "#/components/parameters/serverId"
       responses:

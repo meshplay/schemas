@@ -19,7 +19,7 @@ export interface paths {
         put?: never;
         /**
          * Register Connection
-         * @description Register with Meshery Cloud
+         * @description Register with Meshplay Cloud
          */
         post: operations["RegisterConnection"];
         delete?: never;
@@ -123,10 +123,10 @@ export interface paths {
         put?: never;
         post?: never;
         /**
-         * Delete Meshery connection
-         * @description Deletes a given meshplay connection. This is generally used for deleting connections from Meshery Server UI where UI is not aware of connection IDs.
+         * Delete Meshplay connection
+         * @description Deletes a given meshplay connection. This is generally used for deleting connections from Meshplay Server UI where UI is not aware of connection IDs.
          */
-        delete: operations["DeleteMesheryConnection"];
+        delete: operations["DeleteMeshplayConnection"];
         options?: never;
         head?: never;
         patch?: never;
@@ -193,7 +193,7 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        /** @description Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections */
+        /** @description Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections */
         connection: {
             /** @description ID */
             id?: components["schemas"]["uuid"];
@@ -276,7 +276,7 @@ export interface components {
         };
         /**
          * Format: uuid
-         * @description A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+         * @description A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
          */
         uuid: string;
         /** Format: date-time */
@@ -289,7 +289,7 @@ export interface components {
         id: string;
         model_definition: components["schemas"]["model"];
         component_definition: components["schemas"]["component"];
-        /** @description Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management. */
+        /** @description Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management. */
         capability: {
             /** @description Specifies the version of the schema to which the capability definition conforms. */
             schemaVersion: components["schemas"]["versionString"];
@@ -335,7 +335,7 @@ export interface components {
         semverString: string;
         /** @description A string starting with an alphanumeric character. Spaces and hyphens allowed. */
         inputString: string;
-        /** @description Meshery Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities. */
+        /** @description Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities. */
         model: {
             /** @description Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design). */
             id?: components["schemas"]["uuid"];
@@ -361,8 +361,8 @@ export interface components {
              * @description Status of model, including:
              *     - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
              *     - maintenance: model is unavailable for a period of time.
-             *     - enabled: model is available for use for all users of this Meshery Server.
-             *     - ignored: model is unavailable for use for all users of this Meshery Server.
+             *     - enabled: model is available for use for all users of this Meshplay Server.
+             *     - ignored: model is unavailable for use for all users of this Meshplay Server.
              * @enum {string}
              */
             status?: "ignored" | "enabled" | "duplicate";
@@ -558,14 +558,14 @@ export interface components {
             /** @description Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models */
             model: components["schemas"]["model"];
             styles?: components["schemas"]["componentStyles"];
-            /** @description Meshery manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management. */
+            /** @description Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management. */
             capabilities?: components["schemas"]["capability"][];
             /**
              * @description Status of component, including:
              *     - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
              *     - maintenance: model is unavailable for a period of time.
-             *     - enabled: model is available for use for all users of this Meshery Server.
-             *     - ignored: model is unavailable for use for all users of this Meshery Server.
+             *     - enabled: model is available for use for all users of this Meshplay Server.
+             *     - ignored: model is unavailable for use for all users of this Meshplay Server.
              * @default enabled
              * @enum {string}
              */
@@ -576,7 +576,7 @@ export interface components {
                 genealogy?: string;
                 /** @description Identifies whether the component is semantically meaningful or not; identifies whether the component should be treated as deployable entity or is for purposes of logical representation. */
                 isAnnotation?: boolean;
-                /** @description 'published' controls whether the component should be registered in Meshery Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered. */
+                /** @description 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered. */
                 published?: boolean;
             } & {
                 [key: string]: unknown;
@@ -696,7 +696,7 @@ export interface components {
                 to: components["schemas"]["selector"];
             };
         }[];
-        /** @description Relationships define the nature of interaction between interconnected components in Meshery. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships. */
+        /** @description Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships. */
         relationship: {
             /** @description Specifies the version of the schema used for the relationship definition. */
             schemaVersion: components["schemas"]["versionString"];
@@ -719,7 +719,7 @@ export interface components {
             capabilities?: components["schemas"]["capability"][];
             /** @description Metadata contains additional information associated with the Relationship. */
             metadata?: {
-                /** @description Characterization of the meaning of the relationship and its relevance to both Meshery and entities under management. */
+                /** @description Characterization of the meaning of the relationship and its relevance to both Meshplay and entities under management. */
                 description?: components["schemas"]["inputString"];
                 styles?: components["schemas"]["relationshipStyles"];
             };
@@ -793,7 +793,7 @@ export interface components {
         catalog_data: {
             /** @description Tracks the specific content version that has been made available in the Catalog. */
             publishedVersion?: string;
-            /** @description Published content is classifed by its support level. Content classes help you understand the origin and expected support level for each piece of content. It is important to note that the level of support may vary within each class, and you should exercise discretion when using community-contributed content. Content produced and fully supported by Meshery maintainers. This represents the highest level of support and is considered the most reliable. Content produced by partners and verified by Meshery maintainers. While not directly maintained by Meshery, it has undergone a verification process to ensure quality and compatibility. Content produced and supported by the respective project or organization responsible for the specific technology. This class offers a level of support from the project maintainers themselves. Content produced and shared by Meshery users. This includes a wide range of content, such as performance profiles, test results, filters, patterns, and applications. Community content may have varying levels of support and reliability. */
+            /** @description Published content is classifed by its support level. Content classes help you understand the origin and expected support level for each piece of content. It is important to note that the level of support may vary within each class, and you should exercise discretion when using community-contributed content. Content produced and fully supported by Meshplay maintainers. This represents the highest level of support and is considered the most reliable. Content produced by partners and verified by Meshplay maintainers. While not directly maintained by Meshplay, it has undergone a verification process to ensure quality and compatibility. Content produced and supported by the respective project or organization responsible for the specific technology. This class offers a level of support from the project maintainers themselves. Content produced and shared by Meshplay users. This includes a wide range of content, such as performance profiles, test results, filters, patterns, and applications. Community content may have varying levels of support and reliability. */
             class?: string & ("official" | "verified" | "reference architecture");
             /**
              * Model
@@ -835,7 +835,7 @@ export interface components {
                 enableTrace?: boolean;
             };
         };
-        /** @description Schema for the response of a relationship evaluation process in Meshery */
+        /** @description Schema for the response of a relationship evaluation process in Meshplay */
         EvaluationResponse: {
             /** @description Specifies the version of the schema to which the evaluation response conforms. */
             schemaVersion: components["schemas"]["inputString"];
@@ -977,11 +977,11 @@ export interface components {
         };
     };
     parameters: {
-        /** @description Connection kind (eg: Meshery) */
+        /** @description Connection kind (eg: Meshplay) */
         connectionKind: components["schemas"]["text"];
         /** @description Connection ID */
         connectionId: components["schemas"]["id"];
-        /** @description Meshery server ID */
+        /** @description Meshplay server ID */
         serverId: components["schemas"]["id"];
         /** @description Get reponses by page */
         page: string;
@@ -1175,7 +1175,7 @@ export interface operations {
             };
             header?: never;
             path: {
-                /** @description Connection kind (eg: Meshery) */
+                /** @description Connection kind (eg: Meshplay) */
                 connectionKind: components["parameters"]["connectionKind"];
             };
             cookie?: never;
@@ -1200,7 +1200,7 @@ export interface operations {
             query?: never;
             header?: never;
             path: {
-                /** @description Connection kind (eg: Meshery) */
+                /** @description Connection kind (eg: Meshplay) */
                 connectionKind: components["parameters"]["connectionKind"];
             };
             cookie?: never;
@@ -1234,7 +1234,7 @@ export interface operations {
             };
             header?: never;
             path: {
-                /** @description Connection kind (eg: Meshery) */
+                /** @description Connection kind (eg: Meshplay) */
                 connectionKind: components["parameters"]["connectionKind"];
                 /** @description Connection ID */
                 connectionId: components["parameters"]["connectionId"];
@@ -1256,12 +1256,12 @@ export interface operations {
             500: components["responses"]["500"];
         };
     };
-    DeleteMesheryConnection: {
+    DeleteMeshplayConnection: {
         parameters: {
             query?: never;
             header?: never;
             path: {
-                /** @description Meshery server ID */
+                /** @description Meshplay server ID */
                 meshplayServerID: components["parameters"]["serverId"];
             };
             cookie?: never;

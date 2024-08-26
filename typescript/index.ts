@@ -7,22 +7,22 @@ import {
   CaveatsAndConsiderations,
 } from "./constructs/v1alpha1/catalog_data";
 import {
-HttpsSchemasMesheryIoCapabilityJson
+HttpsSchemasMeshplayIoCapabilityJson
 } from "./constructs/v1alpha1/capability"
 
 // v1alpha2
 import { DesignSchema } from "./constructs/v1alpha2/design";
-import { HttpsSchemasMesheryIoRelationshipJson } from "./constructs/v1alpha2/relationship";
+import { HttpsSchemasMeshplayIoRelationshipJson } from "./constructs/v1alpha2/relationship";
 
 // v1alpha3
-import {HttpsSchemasMesheryIoRelationshipJson  as V1alpha3Relationship} from "./constructs/v1alpha3/relationship"
+import {HttpsSchemasMeshplayIoRelationshipJson  as V1alpha3Relationship} from "./constructs/v1alpha3/relationship"
 import { 
-  HttpsSchemasMesheryIoSelectorsJson as V1alpha3Selectors
+  HttpsSchemasMeshplayIoSelectorsJson as V1alpha3Selectors
 } from "./constructs/v1alpha3/selectors"
 
 // v1beta1
-import { HttpsSchemasMesheryIoComponentJson,Styles} from "./constructs/v1beta1/component";
-import { HttpsSchemasMesheryIoModelJson } from "./constructs/v1beta1/model";
+import { HttpsSchemasMeshplayIoComponentJson,Styles} from "./constructs/v1beta1/component";
+import { HttpsSchemasMeshplayIoModelJson } from "./constructs/v1beta1/model";
 import {DesignSchema as V1beta1DesignSchema} from "./constructs/v1beta1/designs"
 
 
@@ -39,12 +39,12 @@ export namespace core {
 export namespace v1alpha1 {
   export type CatalogData = CatalogDataT;
   export type CatalogCaveatsAndConsiderations = CaveatsAndConsiderations;
-  export type Capability = HttpsSchemasMesheryIoCapabilityJson;
+  export type Capability = HttpsSchemasMeshplayIoCapabilityJson;
 }
 
 export namespace v1alpha2 {
   export type Design = DesignSchema;
-  export type Relationship = HttpsSchemasMesheryIoRelationshipJson;
+  export type Relationship = HttpsSchemasMeshplayIoRelationshipJson;
 }
 
 export namespace v1alpha3 {
@@ -53,8 +53,8 @@ export namespace v1alpha3 {
 }
 
 export namespace v1beta1 {
-  export type Component = HttpsSchemasMesheryIoComponentJson;
-  export type Model = HttpsSchemasMesheryIoModelJson;
+  export type Component = HttpsSchemasMeshplayIoComponentJson;
+  export type Model = HttpsSchemasMeshplayIoModelJson;
   export type Design = V1beta1DesignSchema;
 }
 

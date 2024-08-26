@@ -8,7 +8,7 @@
 /**
  * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components
  */
-export interface HttpsSchemasMesheryIoComponentJson {
+export interface HttpsSchemasMeshplayIoComponentJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -33,13 +33,13 @@ export interface HttpsSchemasMesheryIoComponentJson {
    * Format specifies the format used in the `component.schema` field. JSON is the default.
    */
   format?: "JSON" | "CUE";
-  model: HttpsSchemasMesheryIoModelJson;
+  model: HttpsSchemasMeshplayIoModelJson;
   /**
    * Metadata contains additional information associated with the component.
    */
   metadata?: {
     /**
-     * Meshery manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+     * Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
      */
     capabilities?: {
       designer?: {
@@ -292,7 +292,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
      */
     isAnnotation?: boolean;
     /**
-     * 'published' controls whether the component should be registered in Meshery Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
+     * 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
      */
     published?: boolean;
     [k: string]: unknown;
@@ -322,7 +322,7 @@ export interface HttpsSchemasMesheryIoComponentJson {
 /**
  * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models
  */
-export interface HttpsSchemasMesheryIoModelJson {
+export interface HttpsSchemasMeshplayIoModelJson {
   /**
    * Specifies the version of the schema used for the definition.
    */
@@ -347,8 +347,8 @@ export interface HttpsSchemasMesheryIoModelJson {
    * Status of model, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
    * - maintenance: model is unavailable for a period of time.
-   * - enabled: model is available for use for all users of this Meshery Server.
-   * - ignored: model is unavailable for use for all users of this Meshery Server.
+   * - enabled: model is available for use for all users of this Meshplay Server.
+   * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
   registrant: {

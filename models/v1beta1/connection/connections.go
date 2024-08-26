@@ -22,7 +22,7 @@ const (
 	Registered   ConnectionStatus = "registered"
 )
 
-// Connection Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections
+// Connection Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
 type Connection struct {
 	CreatedAt time.Time `json:"created_at" yaml:"created_at"`
 
@@ -50,7 +50,7 @@ type Connection struct {
 	Type      string   `json:"type" yaml:"type"`
 	UpdatedAt time.Time `json:"updated_at" yaml:"updated_at"`
 
-	// UserID A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.
+	// UserID A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
 	UserID uuid.UUID `json:"user_id" yaml:"user_id"`
 }
 
@@ -87,7 +87,7 @@ type K8sContext struct {
 	DeploymentType     *string                `json:"deployment_type,omitempty"`
 	Id                 externalRef2.Id        `json:"id,omitempty"`
 	KubernetesServerId externalRef2.Id        `json:"kubernetes_server_id,omitempty"`
-	MesheryInstanceId  externalRef2.Id        `json:"meshplay_instance_id,omitempty"`
+	MeshplayInstanceId  externalRef2.Id        `json:"meshplay_instance_id,omitempty"`
 	Name               externalRef2.Text      `json:"name,omitempty"`
 	Owner              externalRef2.Id        `json:"owner,omitempty"`
 	Server             *string                `json:"server,omitempty"`
@@ -100,8 +100,8 @@ type K8sContextPersistResponse struct {
 	K8sContext *K8sContext `json:"k8sContext,omitempty"`
 }
 
-// MesheryInstance defines model for meshplayInstance.
-type MesheryInstance struct {
+// MeshplayInstance defines model for meshplayInstance.
+type MeshplayInstance struct {
 	CreatedAt      externalRef2.Time     `json:"created_at,omitempty"`
 	DeletedAt      externalRef2.Time     `json:"deleted_at,omitempty"`
 	Id             externalRef2.Id       `json:"id,omitempty"`

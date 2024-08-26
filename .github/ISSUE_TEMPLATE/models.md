@@ -1,6 +1,6 @@
 ---
 name: 🖥 💡 Models Update
-about: An update, addition, or removal of one or more of the models, components, relationships, workflows, or policies within Meshery Models.
+about: An update, addition, or removal of one or more of the models, components, relationships, workflows, or policies within Meshplay Models.
 title: '[Models] '
 labels: 
 - area/models
@@ -19,14 +19,14 @@ assignees: ''
 
 - 🙋🏾🙋🏼 Questions: [Discussion Forum](http://discuss.meshplay.io) and [Community Slack](https://slack.meshplay.io)
 
-### Understanding Meshery Models
+### Understanding Meshplay Models
 
 - 📚 [Models](https://docs.meshplay.io/concepts/logical/models)
   - 📚 [Components](https://docs.meshplay.io/concepts/logical/components)
   - 📚 [Relationships](https://docs.meshplay.io/concepts/logical/components)
 - 👨‍💻[Models Repository](https://github.com/meshplay/meshplay/tree/master/server/meshmodel)
 
- ### Contributing to Meshery Models
+ ### Contributing to Meshplay Models
  - [Contributing Models](https://docs.meshplay.io/project/contributing/contributing-models)
    - [Contributing Components](https://docs.meshplay.io/project/contributing/contributing-components)
    - [Contributing Relationships](https://docs.meshplay.io/project/contributing/contributing-relationships)

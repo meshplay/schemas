@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
-  title: Meshery Relationship Evaluation API
+  title: Meshplay Relationship Evaluation API
   version: 1.0.0
-  description: API for evaluating relationships in Meshery designs
+  description: API for evaluating relationships in Meshplay designs
 
 paths:
   /evaluate:
@@ -48,7 +48,7 @@ components:
 
     EvaluationResponse:
       type: object
-      description: Schema for the response of a relationship evaluation process in Meshery
+      description: Schema for the response of a relationship evaluation process in Meshplay
       required:
         - schemaVersion
         - design

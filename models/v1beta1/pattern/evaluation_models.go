@@ -31,7 +31,7 @@ type Trace struct {
 	RelationshipsRemoved []relationship.RelationshipDefinition `json:"relationshipsRemoved" yaml:"relationshipsRemoved"`
 }
 
-// EvaluationResponse Schema for the response of a relationship evaluation process in Meshery
+// EvaluationResponse Schema for the response of a relationship evaluation process in Meshplay
 type EvaluationResponse struct {
 	// Design Designs are your primary tool for collaborative authorship of your infrastructure, workflow, and processes.
 	Design PatternFile `json:"design" yaml:"design"`

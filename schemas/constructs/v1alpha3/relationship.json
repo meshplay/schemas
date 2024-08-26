@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.meshplay.io/relationship.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Relationships define the nature of interaction between interconnected components in Meshery. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.",
+  "description": "Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.",
   "required": [
     "schemaVersion",
     "version",
@@ -134,7 +134,7 @@
         },
         "status": {
           "type": "string",
-          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshery Server.\n- ignored: model is unavailable for use for all users of this Meshery Server.",
+          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshplay Server.\n- ignored: model is unavailable for use for all users of this Meshplay Server.",
           "enum": [
             "ignored",
             "enabled",
@@ -153,7 +153,7 @@
           },
           "$id": "https://schemas.meshplay.io/component.json",
           "$schema": "http://json-schema.org/draft-07/schema#",
-          "description": "Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
           "additionalProperties": false,
           "type": "object",
           "required": [
@@ -261,7 +261,7 @@
               },
               "type": "string",
               "format": "uuid",
-              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
               "x-go-type": "uuid.UUID",
               "x-go-type-import": {
                 "path": "github.com/gofrs/uuid"
@@ -303,7 +303,7 @@
             "id": {
               "type": "string",
               "format": "uuid",
-              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
               "x-go-type": "uuid.UUID",
               "x-go-type-import": {
                 "path": "github.com/gofrs/uuid"
@@ -356,7 +356,7 @@
               "items": {
                 "$id": "https://schemas.meshplay.io/capability.json",
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+                "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                 "additionalProperties": false,
                 "type": "object",
                 "required": [
@@ -669,7 +669,7 @@
       "items": {
         "$id": "https://schemas.meshplay.io/capability.json",
         "$schema": "http://json-schema.org/draft-07/schema#",
-        "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+        "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
         "additionalProperties": false,
         "type": "object",
         "required": [
@@ -838,7 +838,7 @@
       },
       "properties": {
         "description": {
-          "description": "Characterization of the meaning of the relationship and its relevance to both Meshery and entities under management.",
+          "description": "Characterization of the meaning of the relationship and its relevance to both Meshplay and entities under management.",
           "type": "string",
           "pattern": "^[a-zA-Z_][a-zA-Z0-9_-]*[a-zA-Z0-9_]$",
           "x-oapi-codegen-extra-tags": {
@@ -1266,7 +1266,7 @@
                         },
                         "status": {
                           "type": "string",
-                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshery Server.\n- ignored: model is unavailable for use for all users of this Meshery Server.",
+                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshplay Server.\n- ignored: model is unavailable for use for all users of this Meshplay Server.",
                           "enum": [
                             "ignored",
                             "enabled",
@@ -1285,7 +1285,7 @@
                           },
                           "$id": "https://schemas.meshplay.io/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -1393,7 +1393,7 @@
                               },
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -1435,7 +1435,7 @@
                             "id": {
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -1488,7 +1488,7 @@
                               "items": {
                                 "$id": "https://schemas.meshplay.io/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
-                                "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+                                "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
                                 "type": "object",
                                 "required": [
@@ -1741,7 +1741,7 @@
                     "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                       "x-go-type": "uuid.UUID",
                       "x-go-type-import": {
                         "path": "github.com/gofrs/uuid"
@@ -1780,7 +1780,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -1842,7 +1842,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -2056,7 +2056,7 @@
                         },
                         "status": {
                           "type": "string",
-                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshery Server.\n- ignored: model is unavailable for use for all users of this Meshery Server.",
+                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshplay Server.\n- ignored: model is unavailable for use for all users of this Meshplay Server.",
                           "enum": [
                             "ignored",
                             "enabled",
@@ -2075,7 +2075,7 @@
                           },
                           "$id": "https://schemas.meshplay.io/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -2183,7 +2183,7 @@
                               },
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -2225,7 +2225,7 @@
                             "id": {
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -2278,7 +2278,7 @@
                               "items": {
                                 "$id": "https://schemas.meshplay.io/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
-                                "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+                                "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
                                 "type": "object",
                                 "required": [
@@ -2531,7 +2531,7 @@
                     "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                       "x-go-type": "uuid.UUID",
                       "x-go-type-import": {
                         "path": "github.com/gofrs/uuid"
@@ -2570,7 +2570,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -2632,7 +2632,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -2856,7 +2856,7 @@
                         },
                         "status": {
                           "type": "string",
-                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshery Server.\n- ignored: model is unavailable for use for all users of this Meshery Server.",
+                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshplay Server.\n- ignored: model is unavailable for use for all users of this Meshplay Server.",
                           "enum": [
                             "ignored",
                             "enabled",
@@ -2875,7 +2875,7 @@
                           },
                           "$id": "https://schemas.meshplay.io/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -2983,7 +2983,7 @@
                               },
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -3025,7 +3025,7 @@
                             "id": {
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -3078,7 +3078,7 @@
                               "items": {
                                 "$id": "https://schemas.meshplay.io/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
-                                "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+                                "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
                                 "type": "object",
                                 "required": [
@@ -3331,7 +3331,7 @@
                     "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                       "x-go-type": "uuid.UUID",
                       "x-go-type-import": {
                         "path": "github.com/gofrs/uuid"
@@ -3370,7 +3370,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -3432,7 +3432,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -3646,7 +3646,7 @@
                         },
                         "status": {
                           "type": "string",
-                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshery Server.\n- ignored: model is unavailable for use for all users of this Meshery Server.",
+                          "description": "Status of model, including:\n- duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.\n- maintenance: model is unavailable for a period of time.\n- enabled: model is available for use for all users of this Meshplay Server.\n- ignored: model is unavailable for use for all users of this Meshplay Server.",
                           "enum": [
                             "ignored",
                             "enabled",
@@ -3665,7 +3665,7 @@
                           },
                           "$id": "https://schemas.meshplay.io/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -3773,7 +3773,7 @@
                               },
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -3815,7 +3815,7 @@
                             "id": {
                               "type": "string",
                               "format": "uuid",
-                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                              "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                               "x-go-type": "uuid.UUID",
                               "x-go-type-import": {
                                 "path": "github.com/gofrs/uuid"
@@ -3868,7 +3868,7 @@
                               "items": {
                                 "$id": "https://schemas.meshplay.io/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
-                                "description": "Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.",
+                                "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
                                 "type": "object",
                                 "required": [
@@ -4121,7 +4121,7 @@
                     "id": {
                       "type": "string",
                       "format": "uuid",
-                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                      "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                       "x-go-type": "uuid.UUID",
                       "x-go-type-import": {
                         "path": "github.com/gofrs/uuid"
@@ -4160,7 +4160,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"
@@ -4222,7 +4222,7 @@
                                       "id": {
                                         "type": "string",
                                         "format": "uuid",
-                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshery. The UUID core defintion is used across different schemas.",
+                                        "description": "A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.",
                                         "x-go-type": "uuid.UUID",
                                         "x-go-type-import": {
                                           "path": "github.com/gofrs/uuid"

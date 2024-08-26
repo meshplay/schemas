@@ -1,6 +1,6 @@
 ---
-name: 🖥 💡 Meshery UI Feature Request
-about: Request an enhancement in Meshery's UI
+name: 🖥 💡 Meshplay UI Feature Request
+about: Request an enhancement in Meshplay's UI
 title: '[UI]'
 labels: component/ui, language/javascript, framework/react, kind/enhancement
 assignees: ''
@@ -25,6 +25,6 @@ assignees: ''
 
 ### Contributor [Guides](https://docs.meshplay.io/project/contributing) and [Handbook](https://layer5.io/community/handbook)
 
-- 🎨 Wireframes and [designs for Meshery UI](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshery-UI) in Figma [(open invite)](https://www.figma.com/team_invite/redeem/qJy1c95qirjgWQODApilR9)
-- 🖥 [Contributing to Meshery UI](https://docs.meshplay.io/project/contributing/contributing-ui)
+- 🎨 Wireframes and [designs for Meshplay UI](https://www.figma.com/file/SMP3zxOjZztdOLtgN4dS2W/Meshplay-UI) in Figma [(open invite)](https://www.figma.com/team_invite/redeem/qJy1c95qirjgWQODApilR9)
+- 🖥 [Contributing to Meshplay UI](https://docs.meshplay.io/project/contributing/contributing-ui)
 - 🙋🏾🙋🏼 Questions: [Discussion Forum](http://discuss.meshplay.io) and [Community Slack](https://slack.meshplay.io)

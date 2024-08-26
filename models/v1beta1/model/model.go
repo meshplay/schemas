@@ -49,7 +49,7 @@ type Model struct {
 	Version string `json:"version" yaml:"version"`
 }
 
-// ModelDefinition Meshery Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
+// ModelDefinition Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
 type ModelDefinition struct {
 	// Category Category of the model.
 	Category category.CategoryDefinition `json:"category" yaml:"category" gorm:"foreignKey:CategoryId;references:Id"`
@@ -74,7 +74,7 @@ type ModelDefinition struct {
 	// Name The unique name for the model within the scope of a registrant.
 	Name string `json:"name" yaml:"name"`
 
-	// Registrant Meshery Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshery. Learn more at https://docs.meshplay.io/concepts/logical/connections
+	// Registrant Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
 	Registrant connection.Connection `gorm:"foreignKey:RegistrantId;references:Id" json:"registrant" yaml:"registrant"`
 
 	RegistrantId uuid.UUID `json:"connection_id" gorm:"column:connection_id" yaml:"connection_id"`
@@ -85,8 +85,8 @@ type ModelDefinition struct {
 	// Status Status of model, including:
 	// - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
 	// - maintenance: model is unavailable for a period of time.
-	// - enabled: model is available for use for all users of this Meshery Server.
-	// - ignored: model is unavailable for use for all users of this Meshery Server.
+	// - enabled: model is available for use for all users of this Meshplay Server.
+	// - ignored: model is unavailable for use for all users of this Meshplay Server.
 	Status ModelDefinitionStatus `json:"status" yaml:"status"`
 
 	// SubCategory Sub-category of the model.
@@ -110,7 +110,7 @@ type ModelDefinitionMetadataCapabilitiesStatus string
 
 // ModelDefinition_Metadata Metadata containing additional information associated with the model.
 type ModelDefinition_Metadata struct {
-	// Capabilities Meshery manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshery for full lifecycle management.
+	// Capabilities Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
 	Capabilities *[]capability.Capability `json:"capabilities,omitempty" yaml:"capabilities"`
 
 	// IsAnnotation Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
@@ -139,8 +139,8 @@ type ModelDefinitionRegistrantStatus string
 // ModelDefinitionStatus Status of model, including:
 // - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
 // - maintenance: model is unavailable for a period of time.
-// - enabled: model is available for use for all users of this Meshery Server.
-// - ignored: model is unavailable for use for all users of this Meshery Server.
+// - enabled: model is available for use for all users of this Meshplay Server.
+// - ignored: model is unavailable for use for all users of this Meshplay Server.
 type ModelDefinitionStatus string
 
 // Getter for additional properties for ModelDefinition_Metadata. Returns the specified
