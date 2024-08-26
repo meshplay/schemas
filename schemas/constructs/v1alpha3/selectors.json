@@ -1,5 +1,5 @@
 {
-  "$id": "https://schemas.meshplay.io/selectors.json",
+  "$id": "https://schemas.meshplay.khulnasoft.com/selectors.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Reusable relationships selectors schema elements",
   "$comment": "Sets of selectors are interpreted as a logical OR, while sets of allow/deny are interpreted a logical AND.",
@@ -68,7 +68,7 @@
           },
           "model": {
             "$ref": "../v1beta1/model.json",
-            "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models"
+            "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models"
           },
           "id": {
             "$ref": "../core.json#/definitions/uuid"

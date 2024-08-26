@@ -1,7 +1,7 @@
 {
-  "$id": "https://schemas.meshplay.io/relationship.json",
+  "$id": "https://schemas.meshplay.khulnasoft.com/relationship.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.",
+  "description": "Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.",
   "required": [
     "schemaVersion",
     "version",
@@ -56,7 +56,7 @@
     },
     "model": {
       "description": "Name of the model in which this relationship is packaged.",
-      "$id": "https://schemas.meshplay.io/model.json",
+      "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "additionalProperties": false,
       "type": "object",
@@ -151,9 +151,9 @@
             "json": "registrant",
             "gorm": "foreignKey:RegistrantId;references:Id"
           },
-          "$id": "https://schemas.meshplay.io/component.json",
+          "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
           "$schema": "http://json-schema.org/draft-07/schema#",
-          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections",
           "additionalProperties": false,
           "type": "object",
           "required": [
@@ -354,7 +354,7 @@
               "type": "array",
               "description": "Capabilities associated with the model",
               "items": {
-                "$id": "https://schemas.meshplay.io/capability.json",
+                "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
                 "$schema": "http://json-schema.org/draft-07/schema#",
                 "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                 "additionalProperties": false,
@@ -607,7 +607,7 @@
       ]
     },
     "kind": {
-      "description": "Kind of the Relationship. Learn more about relationships - https://docs.meshplay.io/concepts/logical/relationships.",
+      "description": "Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.",
       "enum": [
         "hierarchical",
         "edge",
@@ -667,7 +667,7 @@
       "type": "array",
       "description": "Capabilities associated with the relationship.",
       "items": {
-        "$id": "https://schemas.meshplay.io/capability.json",
+        "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
         "$schema": "http://json-schema.org/draft-07/schema#",
         "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
         "additionalProperties": false,
@@ -1187,8 +1187,8 @@
                       }
                     },
                     "model": {
-                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models",
-                      "$id": "https://schemas.meshplay.io/model.json",
+                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models",
+                      "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
                       "$schema": "http://json-schema.org/draft-07/schema#",
                       "additionalProperties": false,
                       "type": "object",
@@ -1283,9 +1283,9 @@
                             "json": "registrant",
                             "gorm": "foreignKey:RegistrantId;references:Id"
                           },
-                          "$id": "https://schemas.meshplay.io/component.json",
+                          "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -1486,7 +1486,7 @@
                               "type": "array",
                               "description": "Capabilities associated with the model",
                               "items": {
-                                "$id": "https://schemas.meshplay.io/capability.json",
+                                "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
                                 "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
@@ -1977,8 +1977,8 @@
                       }
                     },
                     "model": {
-                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models",
-                      "$id": "https://schemas.meshplay.io/model.json",
+                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models",
+                      "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
                       "$schema": "http://json-schema.org/draft-07/schema#",
                       "additionalProperties": false,
                       "type": "object",
@@ -2073,9 +2073,9 @@
                             "json": "registrant",
                             "gorm": "foreignKey:RegistrantId;references:Id"
                           },
-                          "$id": "https://schemas.meshplay.io/component.json",
+                          "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -2276,7 +2276,7 @@
                               "type": "array",
                               "description": "Capabilities associated with the model",
                               "items": {
-                                "$id": "https://schemas.meshplay.io/capability.json",
+                                "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
                                 "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
@@ -2777,8 +2777,8 @@
                       }
                     },
                     "model": {
-                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models",
-                      "$id": "https://schemas.meshplay.io/model.json",
+                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models",
+                      "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
                       "$schema": "http://json-schema.org/draft-07/schema#",
                       "additionalProperties": false,
                       "type": "object",
@@ -2873,9 +2873,9 @@
                             "json": "registrant",
                             "gorm": "foreignKey:RegistrantId;references:Id"
                           },
-                          "$id": "https://schemas.meshplay.io/component.json",
+                          "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -3076,7 +3076,7 @@
                               "type": "array",
                               "description": "Capabilities associated with the model",
                               "items": {
-                                "$id": "https://schemas.meshplay.io/capability.json",
+                                "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
                                 "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,
@@ -3567,8 +3567,8 @@
                       }
                     },
                     "model": {
-                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models",
-                      "$id": "https://schemas.meshplay.io/model.json",
+                      "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models",
+                      "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
                       "$schema": "http://json-schema.org/draft-07/schema#",
                       "additionalProperties": false,
                       "type": "object",
@@ -3663,9 +3663,9 @@
                             "json": "registrant",
                             "gorm": "foreignKey:RegistrantId;references:Id"
                           },
-                          "$id": "https://schemas.meshplay.io/component.json",
+                          "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
                           "$schema": "http://json-schema.org/draft-07/schema#",
-                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections",
+                          "description": "Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections",
                           "additionalProperties": false,
                           "type": "object",
                           "required": [
@@ -3866,7 +3866,7 @@
                               "type": "array",
                               "description": "Capabilities associated with the model",
                               "items": {
-                                "$id": "https://schemas.meshplay.io/capability.json",
+                                "$id": "https://schemas.meshplay.khulnasoft.com/capability.json",
                                 "$schema": "http://json-schema.org/draft-07/schema#",
                                 "description": "Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.",
                                 "additionalProperties": false,

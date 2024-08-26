@@ -41,7 +41,7 @@ const (
 	YAML ComponentFormat = "YAML"
 	CUE  ComponentFormat = "CUE"
 
-	ComponentSchemaVersion = "components.meshplay.io/v1beta1"
+	ComponentSchemaVersion = "components.meshplay.khulnasoft.com/v1beta1"
 )
 
 // Contains information as extracted from the core underlying component eg: Pod's apiVersion, kind and schema
@@ -125,9 +125,9 @@ func main() {
 			}
 
 			// Check if the file contains the schemaVersion
-			if containsSchemaVersion(fileData, "components.meshplay.io/v1beta1") {
+			if containsSchemaVersion(fileData, "components.meshplay.khulnasoft.com/v1beta1") {
 				jobs <- Job{filePath: path}
-			} else if containsSchemaVersion(fileData, "models.meshplay.io/v1beta1") {
+			} else if containsSchemaVersion(fileData, "models.meshplay.khulnasoft.com/v1beta1") {
 				createModel(path, fileData) // Directly create the model
 			}
 		}

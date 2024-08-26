@@ -1,5 +1,5 @@
 
-<p style="text-align:center;" align="center"><a href="https://meshplay.io"><picture>
+<p style="text-align:center;" align="center"><a href="https://meshplay.khulnasoft.com"><picture>
  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-light-text-side.svg">
  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg">
 <img src="https://raw.githubusercontent.com/meshplay/meshplay/master/.github/assets/images/readme/meshplay-logo-dark-text-side.svg"
@@ -19,9 +19,9 @@ alt="Meshplay Logo" width="70%" /></picture></a><br /><br /></p>
   <img src="https://img.shields.io/github/actions/workflow/status/meshplay/meshplay/release-drafter.yml" /></a>
 <a href="https://bestpractices.coreinfrastructure.org/projects/3564" alt="CLI Best Practices">
   <img src="https://bestpractices.coreinfrastructure.org/projects/3564/badge" /></a>
-<a href="http://discuss.meshplay.io" alt="Discuss Users">
+<a href="http://discuss.meshplay.khulnasoft.com" alt="Discuss Users">
   <img src="https://img.shields.io/discourse/users?label=discuss&logo=discourse&server=https%3A%2F%2Fdiscuss.khulnasoft.com" /></a>
-<a href="https://slack.meshplay.io" alt="Join Slack">
+<a href="https://slack.meshplay.khulnasoft.com" alt="Join Slack">
   <img src="https://img.shields.io/badge/Slack-@khulnasoft.svg?logo=slack" /></a>
 <a href="https://twitter.com/intent/follow?screen_name=meshplayio" alt="Twitter Follow">
   <img src="https://img.shields.io/twitter/follow/meshplayio.svg?label=Follow+Meshplay&style=social" /></a>
@@ -51,7 +51,7 @@ We can refer the unresolved schemas, but
  -->
 ### External
 
-Meshplay schemas file structure is defined based on definitions and schemas, checkout [docs.meshplay.io](https://docs.meshplay.io/concepts/logical) to learn more about definitions and schemas.
+Meshplay schemas file structure is defined based on definitions and schemas, checkout [docs.meshplay.khulnasoft.com](https://docs.meshplay.khulnasoft.com/concepts/logical) to learn more about definitions and schemas.
 
 Definitions
 - model
@@ -82,7 +82,7 @@ Adapters
 ## Join the Meshplay community!
 
 <a name="contributing"></a><a name="community"></a>
-Our projects are community-built and welcome collaboration. 👍 Be sure to see the <a href="https://khulnasoft.com/community/newcomers">Contributor Journey Map</a> and <a href="https://khulnasoft.com/community/handbook">Community Handbook</a> for a tour of resources available to you and the <a href="https://khulnasoft.com/community/handbook/repository-overview">Repository Overview</a> for a cursory description of repository by technology and programming language. Jump into community <a href="https://slack.meshplay.io">Slack</a> or <a href="http://discuss.meshplay.io">discussion forum</a> to participate.
+Our projects are community-built and welcome collaboration. 👍 Be sure to see the <a href="https://khulnasoft.com/community/newcomers">Contributor Journey Map</a> and <a href="https://khulnasoft.com/community/handbook">Community Handbook</a> for a tour of resources available to you and the <a href="https://khulnasoft.com/community/handbook/repository-overview">Repository Overview</a> for a cursory description of repository by technology and programming language. Jump into community <a href="https://slack.meshplay.khulnasoft.com">Slack</a> or <a href="http://discuss.meshplay.khulnasoft.com">discussion forum</a> to participate.
 
 <p style="clear:both;">
 <a href ="https://khulnasoft.com/community"><img alt="MeshMates" src=".github/assets/images/readme/khulnasoft-community-sign.png" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left" /></a>
@@ -96,15 +96,15 @@ Find out more on the <a href="https://khulnasoft.com/community#meshmate">KhulnaS
 <br /><br />
 <div style="display: flex; justify-content: center; align-items:center;">
 <div>
-<a href="https://meshplay.io/community"><img alt="KhulnaSoft Cloud Native Community" src="https://docs.meshplay.io/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
+<a href="https://meshplay.khulnasoft.com/community"><img alt="KhulnaSoft Cloud Native Community" src="https://docs.meshplay.khulnasoft.com/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
 </div>
 <div style="width:60%; padding-left: 16px; padding-right: 16px">
 <p>
-✔️ <em><strong>Join</strong></em> any or all of the weekly meetings on <a href="https://meshplay.io/calendar">community calendar</a>.<br />
+✔️ <em><strong>Join</strong></em> any or all of the weekly meetings on <a href="https://meshplay.khulnasoft.com/calendar">community calendar</a>.<br />
 ✔️ <em><strong>Watch</strong></em> community <a href="https://www.youtube.com/playlist?list=PL3A-A6hPO2IMPPqVjuzgqNU5xwnFFn3n0">meeting recordings</a>.<br />
 ✔️ <em>Fill-in</em> a <a href="https://khulnasoft.com/newcomers">community member form</a> to gain access to community resources.
 <br />
-✔️ <em><strong>Discuss</strong></em> in the <a href="http://discuss.meshplay.io">Community Forum</a>.<br />
+✔️ <em><strong>Discuss</strong></em> in the <a href="http://discuss.meshplay.khulnasoft.com">Community Forum</a>.<br />
 ✔️ <em><strong>Explore more</strong></em> in the <a href="https://khulnasoft.com/community/handbook">Community Handbook</a>.<br />
 ✔️ <em><strong>Not sure where to start?</strong></em> Grab an open issue with the <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+org%3Akhulnasoft+org%3Ameshplay+org%3Aservice-mesh-performance+org%3Aservice-mesh-patterns+label%3A%22help+wanted%22+">help-wanted label</a>.
 </p>
@@ -113,7 +113,7 @@ Find out more on the <a href="https://khulnasoft.com/community#meshmate">KhulnaS
 
 ## Contributing
 
-Please do! We're a warm and welcoming community of open source contributors. Please join. All types of contributions are welcome. Be sure to read the [Contributor Guides](https://docs.meshplay.io/project/contributing) for a tour of resources available to you and how to get started.
+Please do! We're a warm and welcoming community of open source contributors. Please join. All types of contributions are welcome. Be sure to read the [Contributor Guides](https://docs.meshplay.khulnasoft.com/project/contributing) for a tour of resources available to you and how to get started.
 
 <div>&nbsp;</div>
 

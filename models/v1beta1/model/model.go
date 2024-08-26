@@ -74,7 +74,7 @@ type ModelDefinition struct {
 	// Name The unique name for the model within the scope of a registrant.
 	Name string `json:"name" yaml:"name"`
 
-	// Registrant Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+	// Registrant Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
 	Registrant connection.Connection `gorm:"foreignKey:RegistrantId;references:Id" json:"registrant" yaml:"registrant"`
 
 	RegistrantId uuid.UUID `json:"connection_id" gorm:"column:connection_id" yaml:"connection_id"`

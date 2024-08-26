@@ -6,7 +6,7 @@
  */
 
 /**
- * Components are the atomic units for designing infrastructure. Learn more at https://docs.meshplay.io/concepts/components
+ * Components are the atomic units for designing infrastructure. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
  */
 export interface ComponentDefinitionsJson {
   /**
@@ -56,7 +56,7 @@ export interface ComponentDefinitionsJson {
   schema: string;
 }
 /**
- * Model of the component. Learn more at https://docs.meshplay.io/concepts/models
+ * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson {
   /**

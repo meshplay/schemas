@@ -106,7 +106,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson {
   /**

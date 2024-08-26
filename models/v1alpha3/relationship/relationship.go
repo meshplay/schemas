@@ -135,7 +135,7 @@ type SelectorItem struct {
 	Kind  *string       `json:"kind" yaml:"kind"`
 	Match MatchSelector `json:"match,omitempty" yaml:"match,omitempty"`
 
-	// Model Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models
+	// Model Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
 	Model *model.ModelDefinition                  `json:"model,omitempty" yaml:"model"`
 	Patch *RelationshipDefinition_Selectors_Patch `json:"patch" yaml:"patch"`
 }
@@ -166,7 +166,7 @@ const (
 	Ignored RelationshipDefinitionStatus = "ignored"
 )
 
-// RelationshipDefinition Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.
+// RelationshipDefinition Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
 type RelationshipDefinition struct {
 	// Id Uniquely identifies the entity
 	Id uuid.UUID `json:"id" yaml:"id"`
@@ -177,7 +177,7 @@ type RelationshipDefinition struct {
 	// EvaluationQuery Optional. Assigns the policy to be used for the evaluation of the relationship. Deprecation Notice: In the future, this property is either to be removed or to it is to be an array of optional policy $refs.
 	EvaluationQuery *string `json:"evaluationQuery" yaml:"evaluationQuery"`
 
-	// Kind Kind of the Relationship. Learn more about relationships - https://docs.meshplay.io/concepts/logical/relationships.
+	// Kind Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
 	Kind RelationshipDefinitionKind `json:"kind" yaml:"kind"`
 
 	// Metadata Metadata contains additional information associated with the Relationship.
@@ -213,7 +213,7 @@ type RelationshipDefinitionCapabilitiesEntityState string
 // RelationshipDefinitionCapabilitiesStatus Status of the capability
 type RelationshipDefinitionCapabilitiesStatus string
 
-// RelationshipDefinitionKind Kind of the Relationship. Learn more about relationships - https://docs.meshplay.io/concepts/logical/relationships.
+// RelationshipDefinitionKind Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
 type RelationshipDefinitionKind string
 
 type RelationshipDefinitionMetadataStyles0TargetArrowFill string

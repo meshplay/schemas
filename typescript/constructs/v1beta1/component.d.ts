@@ -183,7 +183,7 @@ export type ComponentStyles = Styles & {
 };
 
 /**
- * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components
+ * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
  */
 export interface HttpsSchemasMeshplayIoComponentJson {
   /**
@@ -268,7 +268,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
   };
 }
 /**
- * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models
+ * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson {
   /**
@@ -368,7 +368,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson1 {
   /**

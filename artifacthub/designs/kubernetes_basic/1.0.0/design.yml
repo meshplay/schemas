@@ -3,7 +3,7 @@ services:
   AnchorNode:
     name: AnchorNode
     type: AnchorNode
-    apiVersion: core.meshplay.io/v1alpha1
+    apiVersion: core.meshplay.khulnasoft.com/v1alpha1
     namespace: helloah
     version: 0.7.1
     model: meshplay-core

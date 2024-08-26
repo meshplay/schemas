@@ -57,7 +57,7 @@ export type To = {
 }[];
 
 /**
- * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.
+ * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
  */
 export interface HttpsSchemasMeshplayIoRelationshipJson {
   /**
@@ -218,7 +218,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson {
   /**
@@ -320,7 +320,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson {
   };
 }
 /**
- * Model of the component. Learn more at https://docs.meshplay.io/concepts/models
+ * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson1 {
   /**
@@ -420,7 +420,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
   };
 }
 /**
- * Model of the component. Learn more at https://docs.meshplay.io/concepts/models
+ * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson2 {
   /**

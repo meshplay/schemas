@@ -14,7 +14,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cuelang.org/go v0.6.0 // indirect
 	github.com/cockroachdb/apd/v3 v3.2.1 // indirect
-	github.com/go-logr/logr v1.3.0 // indirect
+	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/s2a-go v0.1.7 // indirect
@@ -27,6 +27,7 @@ require (
 	github.com/jackc/puddle/v2 v2.2.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
+	github.com/khulnasoft/meshkit v0.0.0-20240321004958-78aeb2ea244b // indirect
 	github.com/mattn/go-sqlite3 v1.14.17 // indirect
 	github.com/mpvl/unique v0.0.0-20150818121801-cbe035fff7de // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect

@@ -6,7 +6,7 @@
  */
 
 /**
- * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.io/concepts/logical/relationships.
+ * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
  */
 export interface HttpsSchemasMeshplayIoRelationshipJson {
   /**
@@ -23,7 +23,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
   version: string;
   model: HttpsSchemasMeshplayIoModelJson;
   /**
-   * Kind of the Relationship. Learn more about relationships - https://docs.meshplay.io/concepts/logical/relationships.
+   * Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
    */
   kind: "hierarchical" | "edge" | "sibling";
   /**
@@ -722,7 +722,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson {
   /**
@@ -875,7 +875,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson1 {
   };
 }
 /**
- * Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models
+ * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson1 {
   /**
@@ -975,7 +975,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson1 {
   /**
@@ -1077,7 +1077,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson2 {
   };
 }
 /**
- * Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models
+ * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson2 {
   /**
@@ -1177,7 +1177,7 @@ export interface HttpsSchemasMeshplayIoModelJson2 {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson2 {
   /**
@@ -1279,7 +1279,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson3 {
   };
 }
 /**
- * Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models
+ * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson3 {
   /**
@@ -1379,7 +1379,7 @@ export interface HttpsSchemasMeshplayIoModelJson3 {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson3 {
   /**
@@ -1481,7 +1481,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson4 {
   };
 }
 /**
- * Name of the model implicated by this selector. Learn more at https://docs.meshplay.io/concepts/models
+ * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson4 {
   /**
@@ -1581,7 +1581,7 @@ export interface HttpsSchemasMeshplayIoModelJson4 {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.io/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayIoComponentJson4 {
   /**

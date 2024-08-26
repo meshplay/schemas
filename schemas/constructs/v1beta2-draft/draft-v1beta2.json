@@ -1,7 +1,7 @@
 {
-  "$id": "https://schemas.meshplay.io/component.json",
+  "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components",
+  "description": "Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components",
   "additionalProperties": false,
   "type": "object",
   "properties": {
@@ -14,7 +14,7 @@
       "description": "Specifies the version of the component definition."
     },
     "displayName": {
-      "$ref": "https://schemas.meshplay.io/core.json#inputString",
+      "$ref": "https://schemas.meshplay.khulnasoft.com/core.json#inputString",
       "description": "Name of the component in human-readible format."
     },
     "description": {
@@ -31,8 +31,8 @@
       "description": "Format specifies the format used in the `component.schema` field. JSON is the default."
     },
     "model": {
-      "$ref": "https://schemas.meshplay.io/v1beta1/model.json#",
-      "description": "Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models"
+      "$ref": "https://schemas.meshplay.khulnasoft.com/v1beta1/model.json#",
+      "description": "Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models"
     },
     "metadata": {
       "type": "object",

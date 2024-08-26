@@ -1,5 +1,5 @@
 {
-  "$id": "https://schemas.meshplay.io/model.json",
+  "$id": "https://schemas.meshplay.khulnasoft.com/model.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.",
   "additionalProperties": false,

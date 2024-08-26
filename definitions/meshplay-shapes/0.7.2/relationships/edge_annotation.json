@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "relationships.meshplay.io/v1alpha2",
+    "schemaVersion": "relationships.meshplay.khulnasoft.com/v1alpha2",
     "version": "v1.0.0",
     "kind": "Edge",
     "metadata": {
@@ -21,7 +21,7 @@
         }
     },
     "model": {
-        "schemaVersion": "core.meshplay.io/v1beta1",
+        "schemaVersion": "core.meshplay.khulnasoft.com/v1beta1",
         "version": "v1.0.0",
         "name": "meshplay-shapes",
         "model": {

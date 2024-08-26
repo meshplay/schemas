@@ -6,7 +6,7 @@
  */
 
 /**
- * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.io/concepts/components
+ * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
  */
 export interface HttpsSchemasMeshplayIoComponentJson {
   /**
@@ -320,7 +320,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
   };
 }
 /**
- * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.io/concepts/models
+ * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayIoModelJson {
   /**
