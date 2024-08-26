@@ -9,8 +9,8 @@ import (
 	"sync"
 
 	"github.com/gofrs/uuid"
-	"github.com/layer5io/meshkit/database"
-	"github.com/layer5io/meshkit/models/meshmodel/entity"
+	"github.com/khulnasoft/meshkit/database"
+	"github.com/khulnasoft/meshkit/models/meshmodel/entity"
 	"gorm.io/gorm"
 )
 

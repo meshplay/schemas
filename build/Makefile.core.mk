@@ -38,14 +38,14 @@ ADAPTER_URLS := ""
 # Providers
 #-----------------------------------------------------------------------------
 REMOTE_PROVIDER_LOCAL="http://localhost:9876"
-MESHERY_CLOUD_DEV="http://localhost:9876"
-MESHERY_CLOUD_PROD="https://meshplay.layer5.io"
-MESHERY_CLOUD_STAGING="https://staging-meshplay.layer5.io"
+MESHPLAY_CLOUD_DEV="http://localhost:9876"
+MESHPLAY_CLOUD_PROD="https://meshplay.khulnasoft.com"
+MESHPLAY_CLOUD_STAGING="https://staging-meshplay.khulnasoft.com"
 
 #-----------------------------------------------------------------------------
 # Server
 #-----------------------------------------------------------------------------
-MESHERY_K8S_SKIP_COMP_GEN ?= TRUE
+MESHPLAY_K8S_SKIP_COMP_GEN ?= TRUE
 APPLICATIONCONFIGPATH="./apps.json"
 
 #-----------------------------------------------------------------------------

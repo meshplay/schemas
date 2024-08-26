@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/gofrs/uuid"
-	"github.com/layer5io/meshkit/database"
+	"github.com/khulnasoft/meshkit/database"
 	"gorm.io/gorm"
 )
 

@@ -21,7 +21,7 @@ assignees: ''
 <!-- [Optional] Any visual diagrams of the desired user interface. -->
 
 ---
-### Contributor [Guides](https://docs.meshplay.io/project/contributing) and [Handbook](https://layer5.io/community/handbook)
+### Contributor [Guides](https://docs.meshplay.io/project/contributing) and [Handbook](https://khulnasoft.com/community/handbook)
 - 🛠 [Meshplay Build & Release Strategy](https://docs.meshplay.io/project/contributing/build-and-release)
 - 📚 [Instructions for contributing to documentation](https://github.com/meshplay/meshplay/blob/master/CONTRIBUTING.md#documentation-contribution-flow)
    - Meshplay documentation [site](https://docs.meshplay.io/) and [source](https://github.com/meshplay/meshplay/tree/master/docs)

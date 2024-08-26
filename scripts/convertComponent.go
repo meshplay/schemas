@@ -12,7 +12,7 @@ import (
 	"github.com/gofrs/uuid" // Use gofrs UUID package for the target struct
 	// Use google UUID package for conversion
 
-	"github.com/layer5io/meshkit/models/meshmodel/entity"
+	"github.com/khulnasoft/meshkit/models/meshmodel/entity"
 	"github.com/meshplay/schemas/models/v1alpha1/capability"
 	"github.com/meshplay/schemas/models/v1beta1/category"
 	"github.com/meshplay/schemas/models/v1beta1/component"

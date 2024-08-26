@@ -5,7 +5,7 @@ import (
 	"math/big"
 
 	"github.com/gofrs/uuid"
-	"github.com/layer5io/meshkit/utils"
+	"github.com/khulnasoft/meshkit/utils"
 	"github.com/meshplay/schemas/models/conversion"
 	"github.com/meshplay/schemas/models/v1alpha2"
 	"github.com/meshplay/schemas/models/v1alpha3/relationship"

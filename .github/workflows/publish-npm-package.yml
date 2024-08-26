@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: 16
           registry-url: "https://registry.npmjs.org"
-          scope: "@layer5"
+          scope: "@khulnasoft"
 
       - name: Install Dependencies
         run: npm ci
