@@ -8,7 +8,7 @@
 /**
  * Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * The name for the model.
    */

@@ -8,7 +8,7 @@
 /**
  * Meshplay Models serve as a portable unit of packaging to define managed entities, their relationships, and capabilities.
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -41,7 +41,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson;
   /**
    * Category of the model.
    */
@@ -67,7 +67,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -108,7 +108,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson {
   /**
    * ID
    */
@@ -159,7 +159,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */

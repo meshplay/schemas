@@ -59,7 +59,7 @@ export type To = {
 /**
  * `Relationships` define the genealogy between one or more interconnected `Components`. Just as in familial relationships, Meshplay `Relationships` are represented in a variety of forms very much resembling familiar ancestral lineage, including `hierarchical` relationships such as direct parent and child relationships as well as any number of layers of indirect grandparent and grandchild relationships and branch relationships (e.g. aunt, uncle,..). Peer relationships like that of `sibling`s take on different types such as `network` and `dependency`.  Each type of `Relationship` has a `subtype`, `metadata`, `selectors` and some optional parameters.
  */
-export interface HttpsSchemasMeshplayIoRelationshipJson {
+export interface HttpsSchemasMeshplayKhulnasoftComRelationshipJson {
   /**
    * API Version of the Relationship.
    */
@@ -78,7 +78,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
     description?: string;
     [k: string]: unknown;
   };
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson;
   /**
    * Used for further classification of Relationships. Type and SubType together identifies a Relationship.
    */
@@ -108,7 +108,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
 /**
  * Model of the Relationship.
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * The name for the model.
    */

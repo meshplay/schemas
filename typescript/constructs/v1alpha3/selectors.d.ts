@@ -8,6 +8,6 @@
 /**
  * Reusable relationships selectors schema elements
  */
-export interface HttpsSchemasMeshplayIoSelectorsJson {
+export interface HttpsSchemasMeshplayKhulnasoftComSelectorsJson {
   [k: string]: unknown;
 }

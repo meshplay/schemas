@@ -104,6 +104,10 @@ export type ComponentStyles = Styles & {
    */
   height?: number;
   /**
+   * The URL that points to the image to show in the node.
+   */
+  "background-image"?: string;
+  /**
    * The colour of the node’s body. Colours may be specified by name (e.g. red), hex (e.g. #ff0000 or #f00), RGB (e.g. rgb(255, 0, 0)), or HSL (e.g. hsl(0, 100%, 50%)).
    */
   "background-color"?: string;
@@ -115,6 +119,38 @@ export type ComponentStyles = Styles & {
    * The opacity level of the node’s background colour
    */
   "background-opacity"?: number;
+  /**
+   * The x position of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-position-x"?: string;
+  /**
+   * The y position of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-position-y"?: string;
+  /**
+   * The x offset of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-offset-x"?: string;
+  /**
+   * The y offset of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-offset-y"?: string;
+  /**
+   * How the background image is fit to the node. Can be 'none', 'contain', or 'cover'.
+   */
+  "background-fit"?: string;
+  /**
+   * How the background image is clipped to the node. Can be 'none', 'node', or 'node-border'.
+   */
+  "background-clip"?: string;
+  /**
+   * How the background image’s width is determined. Can be 'none', 'inner', or 'outer'.
+   */
+  "background-width-relative-to"?: string;
+  /**
+   * How the background image’s height is determined. Can be 'none', 'inner', or 'outer'.
+   */
+  "background-height-relative-to"?: string;
   /**
    * The size of the node’s border.
    */
@@ -207,7 +243,7 @@ export interface DesignSchema {
    *
    * @minItems 0
    */
-  components: HttpsSchemasMeshplayIoComponentJson[];
+  components: HttpsSchemasMeshplayKhulnasoftComComponentJson[];
   /**
    * Design-level preferences
    */
@@ -221,13 +257,13 @@ export interface DesignSchema {
   /**
    * List of relationships between components
    */
-  relationships?: HttpsSchemasMeshplayIoRelationshipJson[];
+  relationships?: HttpsSchemasMeshplayKhulnasoftComRelationshipJson[];
   [k: string]: unknown;
 }
 /**
  * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
  */
-export interface HttpsSchemasMeshplayIoComponentJson {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson {
   /**
    * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
@@ -252,12 +288,12 @@ export interface HttpsSchemasMeshplayIoComponentJson {
    * Format specifies the format used in the `component.schema` field. JSON is the default.
    */
   format?: "JSON" | "CUE";
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson;
   styles?: ComponentStyles;
   /**
    * Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
    */
-  capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+  capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
   /**
    * Status of component, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
@@ -278,6 +314,10 @@ export interface HttpsSchemasMeshplayIoComponentJson {
      * Identifies whether the component is semantically meaningful or not; identifies whether the component should be treated as deployable entity or is for purposes of logical representation.
      */
     isAnnotation?: boolean;
+    /**
+     * Identifies whether the component is scoped to namespace or clsuter wide.
+     */
+    isNamespaced?: boolean;
     /**
      * 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
      */
@@ -312,7 +352,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
 /**
  * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
@@ -345,7 +385,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson1;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson1;
   /**
    * Category of the model.
    */
@@ -371,7 +411,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -412,7 +452,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson1 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson1 {
   /**
    * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
    */
@@ -463,7 +503,7 @@ export interface HttpsSchemasMeshplayIoComponentJson1 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -579,7 +619,7 @@ export interface Styles {
 /**
  * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
  */
-export interface HttpsSchemasMeshplayIoRelationshipJson {
+export interface HttpsSchemasMeshplayKhulnasoftComRelationshipJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -592,7 +632,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
    * Specifies the version of the relationship definition.
    */
   version: string;
-  model: HttpsSchemasMeshplayIoModelJson1;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson1;
   /**
    * Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
    */
@@ -616,7 +656,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
   /**
    * Capabilities associated with the relationship.
    */
-  capabilities?: HttpsSchemasMeshplayIoCapabilityJson2[];
+  capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson2[];
   /**
    * Metadata contains additional information associated with the Relationship.
    */
@@ -851,7 +891,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
        */
       from: {
         kind?: string;
-        model?: HttpsSchemasMeshplayIoModelJson2;
+        model?: HttpsSchemasMeshplayKhulnasoftComModelJson2;
         /**
          * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
          */
@@ -935,7 +975,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
        */
       to: {
         kind?: string;
-        model?: HttpsSchemasMeshplayIoModelJson3;
+        model?: HttpsSchemasMeshplayKhulnasoftComModelJson3;
         /**
          * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
          */
@@ -1025,7 +1065,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
        */
       from: {
         kind?: string;
-        model?: HttpsSchemasMeshplayIoModelJson4;
+        model?: HttpsSchemasMeshplayKhulnasoftComModelJson4;
         /**
          * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
          */
@@ -1109,7 +1149,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
        */
       to: {
         kind?: string;
-        model?: HttpsSchemasMeshplayIoModelJson5;
+        model?: HttpsSchemasMeshplayKhulnasoftComModelJson5;
         /**
          * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
          */
@@ -1195,7 +1235,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
 /**
  * Name of the model in which this relationship is packaged.
  */
-export interface HttpsSchemasMeshplayIoModelJson1 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson1 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -1228,7 +1268,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson2;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson2;
   /**
    * Category of the model.
    */
@@ -1254,7 +1294,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson1[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson1[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -1295,7 +1335,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson2 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson2 {
   /**
    * ID
    */
@@ -1346,7 +1386,7 @@ export interface HttpsSchemasMeshplayIoComponentJson2 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson1 {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson1 {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -1397,209 +1437,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson1 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson2 {
-  /**
-   * Specifies the version of the schema to which the capability definition conforms.
-   */
-  schemaVersion: string;
-  /**
-   * Version of the capability definition.
-   */
-  version: string;
-  /**
-   * Name of the capability in human-readible format.
-   */
-  displayName: string;
-  /**
-   * A written representation of the purpose and characteristics of the capability.
-   */
-  description?: string;
-  /**
-   * Top-level categorization of the capability
-   */
-  kind: ("action" | "mutate" | "view" | "interaction") & string;
-  /**
-   * Classification of capabilities. Used to group capabilities similar in nature.
-   */
-  type: string;
-  /**
-   * Most granular unit of capability classification. The combination of Kind, Type and SubType together uniquely identify a Capability.
-   */
-  subType?: string;
-  /**
-   * Key that backs the capability.
-   */
-  key?: string;
-  /**
-   * State of the entity in which the capability is applicable.
-   */
-  entityState: ("declaration" | "instance")[];
-  /**
-   * Status of the capability
-   */
-  status: "enabled" | "disabled";
-  /**
-   * Metadata contains additional information associated with the capability. Extension point.
-   */
-  metadata?: {
-    [k: string]: unknown;
-  };
-}
-/**
- * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
- */
-export interface HttpsSchemasMeshplayIoModelJson2 {
-  /**
-   * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
-   */
-  id?: string;
-  /**
-   * Specifies the version of the schema used for the definition.
-   */
-  schemaVersion?: string;
-  /**
-   * Version of the model definition.
-   */
-  version: string;
-  /**
-   * The unique name for the model within the scope of a registrant.
-   */
-  name: string;
-  /**
-   * Human-readable name for the model.
-   */
-  displayName?: string;
-  /**
-   * Description of the model.
-   */
-  description?: string;
-  /**
-   * Status of model, including:
-   * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
-   * - maintenance: model is unavailable for a period of time.
-   * - enabled: model is available for use for all users of this Meshplay Server.
-   * - ignored: model is unavailable for use for all users of this Meshplay Server.
-   */
-  status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson3;
-  /**
-   * Category of the model.
-   */
-  category: {
-    /**
-     * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
-     */
-    id?: string;
-    name?: string;
-    metadata?: {
-      [k: string]: unknown;
-    };
-    [k: string]: unknown;
-  };
-  /**
-   * Sub-category of the model.
-   */
-  subCategory?: string;
-  /**
-   * Metadata containing additional information associated with the model.
-   */
-  metadata?: {
-    /**
-     * Capabilities associated with the model
-     */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson3[];
-    /**
-     * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
-     */
-    isAnnotation?: boolean;
-    /**
-     * Primary color associated with the model.
-     */
-    primaryColor?: string;
-    /**
-     * Secondary color associated with the model.
-     */
-    secondaryColor?: string;
-    /**
-     * SVG representation of the model in white color.
-     */
-    svgWhite?: string;
-    /**
-     * SVG representation of the model in colored format.
-     */
-    svgColor?: string;
-    /**
-     * SVG representation of the complete model.
-     */
-    svgComplete?: string;
-    [k: string]: unknown;
-  };
-  /**
-   * Registrant-defined data associated with the model. Properties pertain to the software being managed (e.g. Kubernetes v1.31)
-   */
-  model?: {
-    /**
-     * Version of the model as defined by the registrant.
-     */
-    version: string;
-    [k: string]: unknown;
-  };
-}
-/**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
- */
-export interface HttpsSchemasMeshplayIoComponentJson3 {
-  /**
-   * ID
-   */
-  id?: string;
-  /**
-   * Connection Name
-   */
-  name?: string;
-  /**
-   * Credential ID
-   */
-  credential_id?: string;
-  /**
-   * Connection Type
-   */
-  type: string;
-  /**
-   * Connection Subtype
-   */
-  sub_type?: string;
-  /**
-   * Connection Kind
-   */
-  kind: string;
-  metadata?: {
-    [k: string]: unknown;
-  };
-  /**
-   * Connection Status
-   */
-  status:
-    | "discovered"
-    | "registered"
-    | "connected"
-    | "ignored"
-    | "maintenance"
-    | "disconnected"
-    | "deleted"
-    | "not found";
-  /**
-   * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
-   */
-  user_id?: string;
-  created_at?: string;
-  updated_at?: string;
-  deleted_at?: string;
-}
-/**
- * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
- */
-export interface HttpsSchemasMeshplayIoCapabilityJson3 {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson2 {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -1650,7 +1488,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson3 {
 /**
  * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson3 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson2 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -1683,7 +1521,7 @@ export interface HttpsSchemasMeshplayIoModelJson3 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson4;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson3;
   /**
    * Category of the model.
    */
@@ -1709,7 +1547,7 @@ export interface HttpsSchemasMeshplayIoModelJson3 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson4[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson3[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -1750,7 +1588,7 @@ export interface HttpsSchemasMeshplayIoModelJson3 {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson4 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson3 {
   /**
    * ID
    */
@@ -1801,7 +1639,7 @@ export interface HttpsSchemasMeshplayIoComponentJson4 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson4 {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson3 {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -1852,7 +1690,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson4 {
 /**
  * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson4 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson3 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -1885,7 +1723,7 @@ export interface HttpsSchemasMeshplayIoModelJson4 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson5;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson4;
   /**
    * Category of the model.
    */
@@ -1911,7 +1749,7 @@ export interface HttpsSchemasMeshplayIoModelJson4 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson5[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson4[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -1952,7 +1790,7 @@ export interface HttpsSchemasMeshplayIoModelJson4 {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson5 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson4 {
   /**
    * ID
    */
@@ -2003,7 +1841,7 @@ export interface HttpsSchemasMeshplayIoComponentJson5 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson5 {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson4 {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -2054,7 +1892,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson5 {
 /**
  * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson5 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson4 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -2087,7 +1925,7 @@ export interface HttpsSchemasMeshplayIoModelJson5 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson6;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson5;
   /**
    * Category of the model.
    */
@@ -2113,7 +1951,7 @@ export interface HttpsSchemasMeshplayIoModelJson5 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson6[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson5[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -2154,7 +1992,7 @@ export interface HttpsSchemasMeshplayIoModelJson5 {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson6 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson5 {
   /**
    * ID
    */
@@ -2205,7 +2043,209 @@ export interface HttpsSchemasMeshplayIoComponentJson6 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson6 {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson5 {
+  /**
+   * Specifies the version of the schema to which the capability definition conforms.
+   */
+  schemaVersion: string;
+  /**
+   * Version of the capability definition.
+   */
+  version: string;
+  /**
+   * Name of the capability in human-readible format.
+   */
+  displayName: string;
+  /**
+   * A written representation of the purpose and characteristics of the capability.
+   */
+  description?: string;
+  /**
+   * Top-level categorization of the capability
+   */
+  kind: ("action" | "mutate" | "view" | "interaction") & string;
+  /**
+   * Classification of capabilities. Used to group capabilities similar in nature.
+   */
+  type: string;
+  /**
+   * Most granular unit of capability classification. The combination of Kind, Type and SubType together uniquely identify a Capability.
+   */
+  subType?: string;
+  /**
+   * Key that backs the capability.
+   */
+  key?: string;
+  /**
+   * State of the entity in which the capability is applicable.
+   */
+  entityState: ("declaration" | "instance")[];
+  /**
+   * Status of the capability
+   */
+  status: "enabled" | "disabled";
+  /**
+   * Metadata contains additional information associated with the capability. Extension point.
+   */
+  metadata?: {
+    [k: string]: unknown;
+  };
+}
+/**
+ * Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
+ */
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson5 {
+  /**
+   * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
+   */
+  id?: string;
+  /**
+   * Specifies the version of the schema used for the definition.
+   */
+  schemaVersion?: string;
+  /**
+   * Version of the model definition.
+   */
+  version: string;
+  /**
+   * The unique name for the model within the scope of a registrant.
+   */
+  name: string;
+  /**
+   * Human-readable name for the model.
+   */
+  displayName?: string;
+  /**
+   * Description of the model.
+   */
+  description?: string;
+  /**
+   * Status of model, including:
+   * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
+   * - maintenance: model is unavailable for a period of time.
+   * - enabled: model is available for use for all users of this Meshplay Server.
+   * - ignored: model is unavailable for use for all users of this Meshplay Server.
+   */
+  status?: "ignored" | "enabled" | "duplicate";
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson6;
+  /**
+   * Category of the model.
+   */
+  category: {
+    /**
+     * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
+     */
+    id?: string;
+    name?: string;
+    metadata?: {
+      [k: string]: unknown;
+    };
+    [k: string]: unknown;
+  };
+  /**
+   * Sub-category of the model.
+   */
+  subCategory?: string;
+  /**
+   * Metadata containing additional information associated with the model.
+   */
+  metadata?: {
+    /**
+     * Capabilities associated with the model
+     */
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson6[];
+    /**
+     * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
+     */
+    isAnnotation?: boolean;
+    /**
+     * Primary color associated with the model.
+     */
+    primaryColor?: string;
+    /**
+     * Secondary color associated with the model.
+     */
+    secondaryColor?: string;
+    /**
+     * SVG representation of the model in white color.
+     */
+    svgWhite?: string;
+    /**
+     * SVG representation of the model in colored format.
+     */
+    svgColor?: string;
+    /**
+     * SVG representation of the complete model.
+     */
+    svgComplete?: string;
+    [k: string]: unknown;
+  };
+  /**
+   * Registrant-defined data associated with the model. Properties pertain to the software being managed (e.g. Kubernetes v1.31)
+   */
+  model?: {
+    /**
+     * Version of the model as defined by the registrant.
+     */
+    version: string;
+    [k: string]: unknown;
+  };
+}
+/**
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
+ */
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson6 {
+  /**
+   * ID
+   */
+  id?: string;
+  /**
+   * Connection Name
+   */
+  name?: string;
+  /**
+   * Credential ID
+   */
+  credential_id?: string;
+  /**
+   * Connection Type
+   */
+  type: string;
+  /**
+   * Connection Subtype
+   */
+  sub_type?: string;
+  /**
+   * Connection Kind
+   */
+  kind: string;
+  metadata?: {
+    [k: string]: unknown;
+  };
+  /**
+   * Connection Status
+   */
+  status:
+    | "discovered"
+    | "registered"
+    | "connected"
+    | "ignored"
+    | "maintenance"
+    | "disconnected"
+    | "deleted"
+    | "not found";
+  /**
+   * A Universally Unique Identifier used to uniquely identify entites in Meshplay. The UUID core defintion is used across different schemas.
+   */
+  user_id?: string;
+  created_at?: string;
+  updated_at?: string;
+  deleted_at?: string;
+}
+/**
+ * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
+ */
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson6 {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */

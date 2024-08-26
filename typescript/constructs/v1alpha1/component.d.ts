@@ -41,7 +41,7 @@ export interface ComponentDefinitionsJson {
     version: string;
     [k: string]: unknown;
   };
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson;
   /**
    * Display name of the component.
    */
@@ -58,7 +58,7 @@ export interface ComponentDefinitionsJson {
 /**
  * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * The name for the model.
    */

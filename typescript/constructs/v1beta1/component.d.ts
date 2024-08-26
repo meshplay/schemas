@@ -104,6 +104,10 @@ export type ComponentStyles = Styles & {
    */
   height?: number;
   /**
+   * The URL that points to the image to show in the node.
+   */
+  "background-image"?: string;
+  /**
    * The colour of the node’s body. Colours may be specified by name (e.g. red), hex (e.g. #ff0000 or #f00), RGB (e.g. rgb(255, 0, 0)), or HSL (e.g. hsl(0, 100%, 50%)).
    */
   "background-color"?: string;
@@ -115,6 +119,38 @@ export type ComponentStyles = Styles & {
    * The opacity level of the node’s background colour
    */
   "background-opacity"?: number;
+  /**
+   * The x position of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-position-x"?: string;
+  /**
+   * The y position of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-position-y"?: string;
+  /**
+   * The x offset of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-offset-x"?: string;
+  /**
+   * The y offset of the background image, measured in percent (e.g. 50%) or pixels (e.g. 10px)
+   */
+  "background-offset-y"?: string;
+  /**
+   * How the background image is fit to the node. Can be 'none', 'contain', or 'cover'.
+   */
+  "background-fit"?: string;
+  /**
+   * How the background image is clipped to the node. Can be 'none', 'node', or 'node-border'.
+   */
+  "background-clip"?: string;
+  /**
+   * How the background image’s width is determined. Can be 'none', 'inner', or 'outer'.
+   */
+  "background-width-relative-to"?: string;
+  /**
+   * How the background image’s height is determined. Can be 'none', 'inner', or 'outer'.
+   */
+  "background-height-relative-to"?: string;
   /**
    * The size of the node’s border.
    */
@@ -185,7 +221,7 @@ export type ComponentStyles = Styles & {
 /**
  * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
  */
-export interface HttpsSchemasMeshplayIoComponentJson {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -210,12 +246,12 @@ export interface HttpsSchemasMeshplayIoComponentJson {
    * Format specifies the format used in the `component.schema` field. JSON is the default.
    */
   format?: "JSON" | "CUE";
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson;
   styles?: ComponentStyles;
   /**
    * Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
    */
-  capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+  capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
   /**
    * Status of component, including:
    * - duplicate: this component is a duplicate of another. The component that is to be the canonical reference and that is duplicated by other components should not be assigned the 'duplicate' status.
@@ -236,6 +272,10 @@ export interface HttpsSchemasMeshplayIoComponentJson {
      * Identifies whether the component is semantically meaningful or not; identifies whether the component should be treated as deployable entity or is for purposes of logical representation.
      */
     isAnnotation?: boolean;
+    /**
+     * Identifies whether the component is scoped to namespace or clsuter wide.
+     */
+    isNamespaced?: boolean;
     /**
      * 'published' controls whether the component should be registered in Meshplay Registry. When the same 'published' property in Models, is set to 'false', the Model property takes precedence with all Entities in the Model not being registered.
      */
@@ -270,7 +310,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
 /**
  * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -303,7 +343,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson1;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson1;
   /**
    * Category of the model.
    */
@@ -329,7 +369,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -370,7 +410,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson1 {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson1 {
   /**
    * ID
    */
@@ -421,7 +461,7 @@ export interface HttpsSchemasMeshplayIoComponentJson1 {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */

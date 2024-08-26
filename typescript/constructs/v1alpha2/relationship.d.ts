@@ -7,7 +7,7 @@
 
 export type From = {
   kind?: string;
-  model?: HttpsSchemasMeshplayIoModelJson1;
+  model?: HttpsSchemasMeshplayKhulnasoftComModelJson1;
   /**
    * A valid semantic version string between 5 and 256 characters. The pattern allows for a major.minor.patch version followed by an optional pre-release tag like '-alpha' or '-beta.2' and an optional build metadata tag like '+build.1.
    */
@@ -32,7 +32,7 @@ export type From = {
 }[];
 export type To = {
   kind?: string;
-  model?: HttpsSchemasMeshplayIoModelJson2;
+  model?: HttpsSchemasMeshplayKhulnasoftComModelJson2;
   /**
    * A valid semantic version string between 5 and 256 characters. The pattern allows for a major.minor.patch version followed by an optional pre-release tag like '-alpha' or '-beta.2' and an optional build metadata tag like '+build.1.
    */
@@ -59,7 +59,7 @@ export type To = {
 /**
  * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
  */
-export interface HttpsSchemasMeshplayIoRelationshipJson {
+export interface HttpsSchemasMeshplayKhulnasoftComRelationshipJson {
   /**
    * Specifies the version of the schema used for the definition.
    */
@@ -94,7 +94,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
     description?: string;
     [k: string]: unknown;
   };
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayKhulnasoftComModelJson;
   /**
    * Selectors are organized as an array, with each item containing a distinct set of selectors that share a common functionality. This structure allows for flexibility in defining relationships, even when different components are involved.
    */
@@ -120,7 +120,7 @@ export interface HttpsSchemasMeshplayIoRelationshipJson {
 /**
  * Model of the Relationship.
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -153,7 +153,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson;
   /**
    * Category of the model.
    */
@@ -179,7 +179,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -220,7 +220,7 @@ export interface HttpsSchemasMeshplayIoModelJson {
 /**
  * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
  */
-export interface HttpsSchemasMeshplayIoComponentJson {
+export interface HttpsSchemasMeshplayKhulnasoftComComponentJson {
   /**
    * ID
    */
@@ -271,7 +271,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
 /**
  * Meshplay manages entities in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. Entities may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
  */
-export interface HttpsSchemasMeshplayIoCapabilityJson {
+export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson {
   /**
    * Specifies the version of the schema to which the capability definition conforms.
    */
@@ -322,7 +322,7 @@ export interface HttpsSchemasMeshplayIoCapabilityJson {
 /**
  * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson1 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson1 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -355,7 +355,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson;
   /**
    * Category of the model.
    */
@@ -381,7 +381,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
@@ -422,7 +422,7 @@ export interface HttpsSchemasMeshplayIoModelJson1 {
 /**
  * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson2 {
+export interface HttpsSchemasMeshplayKhulnasoftComModelJson2 {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -455,7 +455,7 @@ export interface HttpsSchemasMeshplayIoModelJson2 {
    * - ignored: model is unavailable for use for all users of this Meshplay Server.
    */
   status?: "ignored" | "enabled" | "duplicate";
-  registrant: HttpsSchemasMeshplayIoComponentJson;
+  registrant: HttpsSchemasMeshplayKhulnasoftComComponentJson;
   /**
    * Category of the model.
    */
@@ -481,7 +481,7 @@ export interface HttpsSchemasMeshplayIoModelJson2 {
     /**
      * Capabilities associated with the model
      */
-    capabilities?: HttpsSchemasMeshplayIoCapabilityJson[];
+    capabilities?: HttpsSchemasMeshplayKhulnasoftComCapabilityJson[];
     /**
      * Indicates whether the model and its entities should be treated as deployable entities or as logical representations.
      */
