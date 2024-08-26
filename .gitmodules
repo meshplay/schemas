@@ -1,0 +1,6 @@
+[submodule "server/cmd/gowrk2"]
+	path = server/cmd/gowrk2
+	url = https://github.com/khulnasoft-lab/wrk2
+[submodule "server/cmd/nighthawk-go"]
+	path = server/cmd/nighthawk-go
+	url = https://github.com/layer5io/nighthawk-go/
