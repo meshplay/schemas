@@ -8,6 +8,6 @@
 /**
  * Reusable core schema elements
  */
-export interface HttpsSchemasMeshplayIoCoreJson {
+export interface HttpsSchemasMeshplayCoreJson {
   [k: string]: unknown;
 }

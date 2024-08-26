@@ -23,8 +23,8 @@ alt="Meshplay Logo" width="70%" /></picture></a><br /><br /></p>
   <img src="https://img.shields.io/discourse/users?label=discuss&logo=discourse&server=https%3A%2F%2Fdiscuss.khulnasoft.com" /></a>
 <a href="https://slack.meshplay.khulnasoft.com" alt="Join Slack">
   <img src="https://img.shields.io/badge/Slack-@khulnasoft.svg?logo=slack" /></a>
-<a href="https://twitter.com/intent/follow?screen_name=meshplayio" alt="Twitter Follow">
-  <img src="https://img.shields.io/twitter/follow/meshplayio.svg?label=Follow+Meshplay&style=social" /></a>
+<a href="https://twitter.com/intent/follow?screen_name=meshplay" alt="Twitter Follow">
+  <img src="https://img.shields.io/twitter/follow/khulnasoft.svg?label=Follow+Meshplay&style=social" /></a>
 <a href="https://github.com/meshplay/meshplay/releases" alt="Meshplay Downloads">
   <img src="https://img.shields.io/github/downloads/meshplay/meshplay/total" /></a>  
 <!-- <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fmeshplay%2Fmeshplay?ref=badge_shield" alt="License Scan Report">

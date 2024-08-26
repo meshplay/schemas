@@ -24,12 +24,12 @@ export namespace v1alpha1 {
 
 export namespace v1alpha2 {
   export type Design = DesignSchema;
-  export type Relationship = HttpsSchemasMeshplayIoRelationshipJson;
+  export type Relationship = HttpsSchemasMeshplayRelationshipJson;
 }
 
 export namespace v1beta1 {
-  export type Component = HttpsSchemasMeshplayIoComponentJson;
-  export type Model = HttpsSchemasMeshplayIoModelJson;
+  export type Component = HttpsSchemasMeshplayComponentJson;
+  export type Model = HttpsSchemasMeshplayModelJson;
 }
 ```
 

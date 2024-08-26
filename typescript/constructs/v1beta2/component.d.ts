@@ -8,7 +8,7 @@
 /**
  * Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs-meshplay.khulnasoft.com/concepts/components
  */
-export interface HttpsSchemasMeshplayIoComponentJson {
+export interface HttpsSchemasMeshplayComponentJson {
   /**
    * Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design).
    */
@@ -33,7 +33,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
    * Format specifies the format used in the `component.schema` field. JSON is the default.
    */
   format?: "JSON" | "CUE";
-  model: HttpsSchemasMeshplayIoModelJson;
+  model: HttpsSchemasMeshplayModelJson;
   /**
    * Metadata contains additional information associated with the component.
    */
@@ -322,7 +322,7 @@ export interface HttpsSchemasMeshplayIoComponentJson {
 /**
  * Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models
  */
-export interface HttpsSchemasMeshplayIoModelJson {
+export interface HttpsSchemasMeshplayModelJson {
   /**
    * Specifies the version of the schema used for the definition.
    */
