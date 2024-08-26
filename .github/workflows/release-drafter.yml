@@ -8,7 +8,7 @@ on:
       - '.github/**'
 jobs:
   update_release_draft:
-    if: github.repository == 'khulnasoft/meshplay'
+    if: github.repository == 'meshplay/schemas'
     runs-on: ubuntu-22.04
     steps:
       - name: Drafting release
@@ -33,14 +33,14 @@ jobs:
       #   with:
       #     token: ${{ secrets.RELEASEDRAFTER_PAT }}
       #     commit-message: "Created release note file ${{ steps.release_drafter.outputs.tag_name }}.md"
-      #     committer: l5io <ci@khulnasoft.com>
+      #     committer: l5io <ci@layer5.io>
       #     author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
       #     signoff: true
       #     branch: docs/automated-release-notes
       #     base: master
-      #     title: '[Docs] Release Notes for Meshplay ${{ steps.release_drafter.outputs.tag_name }}'
+      #     title: '[Docs] Release Notes for Meshery ${{ steps.release_drafter.outputs.tag_name }}'
       #     body: |
-      #       An auto-generated pull request to document release notes for Meshplay ${{ steps.release_drafter.outputs.tag_name }}
+      #       An auto-generated pull request to document release notes for Meshery ${{ steps.release_drafter.outputs.tag_name }}
       #     labels: |
       #       area/ci
       #       kind/chore

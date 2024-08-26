@@ -1,0 +1,81 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Publish NPM Package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: "Release Version"
+        required: true
+        default: "prerelease"
+        type: choice
+        options:
+          - "prerelease"
+          - "patch"
+          - "minor"
+          - "major"
+      release_variant:
+        description: "Type of release"
+        required: true
+        default: "stable"
+        type: choice
+        options:
+          - "stable"
+          - "alpha"
+          - "beta"
+
+jobs:
+  publish-gpr:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: "master"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: "https://registry.npmjs.org"
+          scope: "@layer5"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Update Release Version
+        env:
+          RELEASE_VERSION: ${{ inputs.release_version }}
+          RELEASE_VARIANT: ${{ inputs.release_variant }}
+        run: |
+          OLD_VERSION=$(node -e "console.log(require('./package.json').version)")
+          if [ $RELEASE_VERSION == "prerelease" ] && [ $RELEASE_VARIANT != "stable" ]; then npm version ${RELEASE_VERSION} --preid ${RELEASE_VARIANT}; fi
+          if [ $RELEASE_VERSION == "prerelease" ] && [ $RELEASE_VARIANT == "stable" ]; then npm version ${RELEASE_VERSION}; fi
+          if [ $RELEASE_VERSION != "prerelease" ] && [ $RELEASE_VARIANT != "stable" ]; then npm version pre${RELEASE_VERSION} --preid ${RELEASE_VARIANT}; fi
+          if [ $RELEASE_VERSION != "prerelease" ] && [ $RELEASE_VARIANT == "stable" ]; then npm version ${RELEASE_VERSION}; fi
+          git add './'
+          NEW_VERSION=$(node -e "console.log(require('./package.json').version)")
+          echo "Updated Package Version" >> $GITHUB_STEP_SUMMARY
+          echo "info Old Version: ${OLD_VERSION}" >> $GITHUB_STEP_SUMMARY
+          echo "info New Version: ${NEW_VERSION}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Build Package
+        run: |
+          npm run build
+          echo "Build New Package" >> $GITHUB_STEP_SUMMARY
+
+      - name: Publish Package
+        run: npm publish --verbose
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Commit and push version change
+        run: |
+          git status
+          git pull --rebase -f
+          git push --verbose
+          echo "Pushed Package changes" >> $GITHUB_STEP_SUMMARY

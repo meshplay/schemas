@@ -7,7 +7,7 @@ on:
       - 'handlers/**'
 jobs:
   swaggerci:
-    if: github.repository == 'khulnasoft/meshplay'
+    if: github.repository == 'meshplay/meshplay'
     name: swagger-docs
     runs-on: ubuntu-22.04
     steps:
@@ -23,12 +23,16 @@ jobs:
         run: swagger generate spec -o ./server/helpers/swagger.yaml --scan-models
       - name: swagger-docs
         run: swagger generate spec -o ./docs/_data/swagger.yml --scan-models && swagger flatten ./docs/_data/swagger.yml -o ./docs/_data/swagger.yml --with-expand --format=yaml
+
+      - name: Pull changes from remote
+        run: git pull origin master
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: docs server/helpers/
           commit_user_name: l5io
-          commit_user_email: ci@khulnasoft.com
+          commit_user_email: ci@layer5.io
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: '--signoff'
           commit_message: "[Docs] Updated swagger docs for REST API"

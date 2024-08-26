@@ -1,1 +1,3 @@
-See https://docs.khulnasoft.com/project/releases
+# Changelog
+
+See https://docs.meshplay.io/project/releases
