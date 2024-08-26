@@ -193,7 +193,7 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
-        /** @description Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections */
+        /** @description Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs-meshplay.khulnasoft.com/concepts/logical/connections */
         connection: {
             /** @description ID */
             id?: components["schemas"]["uuid"];
@@ -537,7 +537,7 @@ export interface components {
             /** @description The opacity of the area outside the viewport texture. Selector needs to be *core* */
             "outside-texture-bg-opacity"?: number;
         };
-        /** @description Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components */
+        /** @description Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs-meshplay.khulnasoft.com/concepts/components */
         component: {
             /** @description Uniquely identifies the entity (i.e. component) as defined in a declaration (i.e. design). */
             id?: components["schemas"]["uuid"];
@@ -555,7 +555,7 @@ export interface components {
              * @enum {string}
              */
             format: "JSON" | "CUE";
-            /** @description Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models */
+            /** @description Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models */
             model: components["schemas"]["model"];
             styles?: components["schemas"]["componentStyles"];
             /** @description Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management. */
@@ -656,7 +656,7 @@ export interface components {
         /** @description Describes the component(s) which are involved in the relationship along with a set of actions to perform upon selection match. */
         selector: {
             kind?: string;
-            /** @description Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models */
+            /** @description Name of the model implicated by this selector. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models */
             model?: components["schemas"]["model"];
             id?: components["schemas"]["uuid"];
             match?: Record<string, never>;
@@ -696,7 +696,7 @@ export interface components {
                 to: components["schemas"]["selector"];
             };
         }[];
-        /** @description Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships. */
+        /** @description Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs-meshplay.khulnasoft.com/concepts/logical/relationships. */
         relationship: {
             /** @description Specifies the version of the schema used for the relationship definition. */
             schemaVersion: components["schemas"]["versionString"];
@@ -705,7 +705,7 @@ export interface components {
             /** @description Name of the model in which this relationship is packaged. */
             model: components["schemas"]["model"];
             /**
-             * @description Kind of the Relationship. Learn more about relationships - https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
+             * @description Kind of the Relationship. Learn more about relationships - https://docs-meshplay.khulnasoft.com/concepts/logical/relationships.
              * @enum {unknown}
              */
             kind: components["schemas"]["inputString"];

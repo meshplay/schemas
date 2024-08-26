@@ -68,7 +68,7 @@
           },
           "model": {
             "$ref": "../v1beta1/model.json",
-            "description": "Name of the model implicated by this selector. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models"
+            "description": "Name of the model implicated by this selector. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models"
           },
           "id": {
             "$ref": "../core.json#/definitions/uuid"

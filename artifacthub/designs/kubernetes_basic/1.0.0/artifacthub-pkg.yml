@@ -4,7 +4,7 @@ displayName: kubernetes_basic
 createdAt: "2024-03-21T14:19:01Z"
 description: Basic Kubernetes design deploying a service and pod
 license: Apache-2
-homeURL: https://docs.meshplay.khulnasoft.com/concepts/logical/designs
+homeURL: https://docs-meshplay.khulnasoft.com/concepts/logical/designs
 appVersion: 1.0.0
 keywords:
     - kubernetes

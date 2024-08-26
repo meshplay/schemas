@@ -14,7 +14,7 @@
         },
         "model": {
           "$ref": "../v1beta1/model.json",
-          "description": "Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models"
+          "description": "Model of the component. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models"
         },
         "version": {
           "$ref": "../core.json#/definitions/semverString"
@@ -77,7 +77,7 @@
         },
         "model": {
           "$ref": "../v1beta1/model.json",
-          "description": "Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models"
+          "description": "Model of the component. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models"
         },
         "version": {
           "$ref": "../core.json#/definitions/semverString"

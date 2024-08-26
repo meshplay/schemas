@@ -51,7 +51,7 @@ We can refer the unresolved schemas, but
  -->
 ### External
 
-Meshplay schemas file structure is defined based on definitions and schemas, checkout [docs.meshplay.khulnasoft.com](https://docs.meshplay.khulnasoft.com/concepts/logical) to learn more about definitions and schemas.
+Meshplay schemas file structure is defined based on definitions and schemas, checkout [docs-meshplay.khulnasoft.com](https://docs-meshplay.khulnasoft.com/concepts/logical) to learn more about definitions and schemas.
 
 Definitions
 - model
@@ -96,7 +96,7 @@ Find out more on the <a href="https://khulnasoft.com/community#meshmate">KhulnaS
 <br /><br />
 <div style="display: flex; justify-content: center; align-items:center;">
 <div>
-<a href="https://meshplay.khulnasoft.com/community"><img alt="KhulnaSoft Cloud Native Community" src="https://docs.meshplay.khulnasoft.com/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
+<a href="https://meshplay.khulnasoft.com/community"><img alt="KhulnaSoft Cloud Native Community" src="https://docs-meshplay.khulnasoft.com/assets/img/readme/community.png" width="140px" style="margin-right:36px; margin-bottom:7px;" width="140px" align="left"/></a>
 </div>
 <div style="width:60%; padding-left: 16px; padding-right: 16px">
 <p>
@@ -113,7 +113,7 @@ Find out more on the <a href="https://khulnasoft.com/community#meshmate">KhulnaS
 
 ## Contributing
 
-Please do! We're a warm and welcoming community of open source contributors. Please join. All types of contributions are welcome. Be sure to read the [Contributor Guides](https://docs.meshplay.khulnasoft.com/project/contributing) for a tour of resources available to you and how to get started.
+Please do! We're a warm and welcoming community of open source contributors. Please join. All types of contributions are welcome. Be sure to read the [Contributor Guides](https://docs-meshplay.khulnasoft.com/project/contributing) for a tour of resources available to you and how to get started.
 
 <div>&nbsp;</div>
 

@@ -1,7 +1,7 @@
 {
   "$id": "https://schemas.meshplay.khulnasoft.com/component.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "description": "Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components",
+  "description": "Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs-meshplay.khulnasoft.com/concepts/components",
   "additionalProperties": false,
   "type": "object",
   "properties": {
@@ -35,7 +35,7 @@
     },
     "model": {
       "$ref": "./model.json",
-      "description": "Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models",
+      "description": "Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models",
       "x-oapi-codegen-extra-tags": {
         "gorm": "foreignKey:ModelId;references:Id"
       }

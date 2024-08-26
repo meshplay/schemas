@@ -22,7 +22,7 @@ const (
 	Registered   ConnectionStatus = "registered"
 )
 
-// Connection Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
+// Connection Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs-meshplay.khulnasoft.com/concepts/logical/connections
 type Connection struct {
 	CreatedAt time.Time `json:"created_at" yaml:"created_at"`
 

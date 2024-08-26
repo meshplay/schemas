@@ -57,7 +57,7 @@ export type To = {
 }[];
 
 /**
- * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/relationships.
+ * Relationships define the nature of interaction between interconnected components in Meshplay. The combination of relationship properties kind, type, and subtype characterize various genealogical relations among and between components. Relationships have selectors, selector sets, metadata, and optional parameters. Learn more at https://docs-meshplay.khulnasoft.com/concepts/logical/relationships.
  */
 export interface HttpsSchemasMeshplayKhulnasoftComRelationshipJson {
   /**
@@ -218,7 +218,7 @@ export interface HttpsSchemasMeshplayKhulnasoftComModelJson {
   };
 }
 /**
- * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs.meshplay.khulnasoft.com/concepts/logical/connections
+ * Meshplay Connections are managed and unmanaged resources that either through discovery or manual entry are tracked by Meshplay. Learn more at https://docs-meshplay.khulnasoft.com/concepts/logical/connections
  */
 export interface HttpsSchemasMeshplayKhulnasoftComComponentJson {
   /**
@@ -320,7 +320,7 @@ export interface HttpsSchemasMeshplayKhulnasoftComCapabilityJson {
   };
 }
 /**
- * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
+ * Model of the component. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayKhulnasoftComModelJson1 {
   /**
@@ -420,7 +420,7 @@ export interface HttpsSchemasMeshplayKhulnasoftComModelJson1 {
   };
 }
 /**
- * Model of the component. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
+ * Model of the component. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models
  */
 export interface HttpsSchemasMeshplayKhulnasoftComModelJson2 {
   /**

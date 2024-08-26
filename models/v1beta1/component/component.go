@@ -306,7 +306,7 @@ type Component struct {
 	Version string `json:"version" yaml:"version"`
 }
 
-// ComponentDefinition Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs.meshplay.khulnasoft.com/concepts/components
+// ComponentDefinition Components are reusable building blocks for depicting capabilities defined within models. Learn more at https://docs-meshplay.khulnasoft.com/concepts/components
 type ComponentDefinition struct {
 	// Capabilities Meshplay manages components in accordance with their specific capabilities. This field explicitly identifies those capabilities largely by what actions a given component supports; e.g. metric-scrape, sub-interface, and so on. This field is extensible. ComponentDefinitions may define a broad array of capabilities, which are in-turn dynamically interpretted by Meshplay for full lifecycle management.
 	Capabilities *[]capability.Capability `json:"capabilities,omitempty" yaml:"capabilities" gorm:"type:bytes;serializer:json"`
@@ -332,7 +332,7 @@ type ComponentDefinition struct {
 	// Metadata Metadata contains additional information associated with the component.
 	Metadata ComponentDefinition_Metadata `gorm:"type:bytes;serializer:json" json:"metadata,omitempty" yaml:"metadata"`
 
-	// Model Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs.meshplay.khulnasoft.com/concepts/models
+	// Model Reference to the specific registered model to which the component belongs and from which model version, category, and other properties may be referenced. Learn more at https://docs-meshplay.khulnasoft.com/concepts/models
 	Model model.ModelDefinition `gorm:"foreignKey:ModelId;references:Id" json:"model" yaml:"model"`
 
 	ModelId uuid.UUID `json:"-" gorm:"index:idx_component_definition_dbs_model_id,column:model_id" yaml:"-"`
